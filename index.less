@@ -1,73 +1,141 @@
-body {
-  width: 100%;
-  height: 100%;
+@font-face {
+  font-family: "ikbiconfont"; /* project id 1882118 */
+  src: url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.eot");
+  src: url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.woff") format("woff"),
+    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.svg#ikbiconfont")
+      format("svg");
 }
 
-#page {
+.ikbiconfont-footer-logo {
+  font-family: "ikbiconfont" !important;
+  font-size: 50px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+
+  line-height: 100px;
+  color: transparent;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+html {
   width: 100%;
-  max-width: 1920px;
-  height: 100%;
+  min-height: 100%;
 
-  #header-wrapper {
+  body {
     width: 100%;
-    height: 500px;
-  }
+    height: 100%;
 
-  #footer-wrapper {
-    position: relative;
-
-    footer::before {
+    #page {
       width: 100%;
-      height: 25px;
-      position: absolute;
-      top: 3px;
-      z-index: -1;
-      content: "";
-      border-top-left-radius: 50% 25px;
-      border-top-right-radius: 50% 25px;
-      background-image: linear-gradient(
-        225deg,
-        #ff3cac 0%,
-        #784ba0 50%,
-        #2b86c5 100%
-      );
-      -webkit-filter: blur(9px);
-      filter: blur(9px);
-    }
+      max-width: 1920px;
+      min-height: 100%;
 
-    footer {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 100%;
-      min-height: 200px;
-      border-top-left-radius: 50% 25px;
-      border-top-right-radius: 50% 25px;
-      background-color: rgb(245, 245, 247);
-    }
+      #header-wrapper {
+        width: 100%;
 
-    nav {
-      // width: 25%;
-      margin: 30px 10px 30px 10px;
-      // background-color: orange;
+        header {
+          width: 100%;
+          height: 100px;
+        }
+      }
 
-      div {
-        background-image: linear-gradient(
-          225deg,
-          #ff3cac 0%,
-          #784ba0 50%,
-          #2b86c5 100%
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        font-size: 16px;
-        font-weight: bold;
+      #article-wrapper {
+        width: 100%;
 
-        a {
-          color: rgb(81, 81, 84);
-          font-size: 14px;
-          text-decoration: none;
+        article {
+          width: 100%;
+          height: 500px;
+        }
+      }
+
+      #footer-wrapper {
+        position: relative;
+
+        footer::before {
+          width: 100%;
+          height: 25px;
+          position: absolute;
+          top: 3px;
+          z-index: -1;
+          content: "";
+          border-top-right-radius: 25px;
+          background-image: linear-gradient(
+            225deg,
+            #ff3cac 0%,
+            #784ba0 50%,
+            #2b86c5 100%
+          );
+          -webkit-filter: blur(15px);
+          filter: blur(15px);
+        }
+
+        footer {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-content: space-around;
+          width: 100%;
+          min-height: 200px;
+          padding: 50px 100px;
+          border-top-right-radius: 25px;
+          background-color: #f5f6f7;
+
+          #footer-logo {
+            width: 100%;
+            height: 100px;
+            padding-left: 25px;
+          }
+
+          nav {
+            flex-grow: 1;
+            flex-shrink: 0;
+            margin: 25px;
+            border-left: 1px #d8d8d8 solid;
+
+            div:nth-child(1)::after {
+              display: block;
+              content: "";
+              width: 25px;
+              height: 1px;
+              margin: 1.5px 0;
+              border-radius: 0.5px;
+              background-image: linear-gradient(
+                -90deg,
+                #ff3cac 0%,
+                #784ba0 50%,
+                #2b86c5 100%
+              );
+            }
+
+            div {
+              color: #282828;
+              font-size: 18px;
+              font-weight: bold;
+              padding: 0px 16px;
+
+              a {
+                color: #222222;
+                font-size: 14px;
+                line-height: 1.2;
+                text-decoration: none;
+                font-weight: lighter;
+                font-family: Microsoft YaHei, Arial, Helvetica, sans-serif;
+              }
+            }
+          }
         }
       }
     }
