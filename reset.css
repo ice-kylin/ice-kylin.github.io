@@ -70,3 +70,6 @@ td:not([align]),
 th:not([align]) {
   text-align: left;
 }
+a {
+  text-decoration: none;
+}

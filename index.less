@@ -10,6 +10,14 @@
       format("svg");
 }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+
 html {
   width: 100%;
   min-height: 100%;
@@ -68,26 +76,17 @@ html {
           justify-content: space-around;
           align-content: space-around;
           width: 100%;
-          min-height: 200px;
           padding: 38px 62px;
           border-top-right-radius: 25px;
           background-color: #f5f6f7;
 
           @media screen and (max-width: 992px) {
-            padding: 38px 16px;
+            padding: 18px;
           }
 
           #footer-logo {
             width: 100%;
             height: 62px;
-
-            .icon {
-              width: 1em;
-              height: 1em;
-              vertical-align: -0.15em;
-              fill: currentColor;
-              overflow: hidden;
-            }
 
             .icon-footer-logo {
               width: 50px;
@@ -104,35 +103,34 @@ html {
             border-left: 1px #d8d8d8 solid;
 
             div {
-              color: #333;
-              font-size: 18px;
-              font-weight: bold;
               padding: 0px 18px;
+              font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
+                Arial, Helvetica, sans-serif;
 
               a {
-                color: #333;
+                color: #595757;
                 font-size: 14px;
                 line-height: 1.75;
-                text-decoration: none;
-                font-weight: lighter;
-                font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
-                  Arial, Helvetica, sans-serif;
               }
             }
 
-            div:nth-child(1)::after {
+            div:first-child {
+              a {
+                color: #333;
+                font-size: 18px;
+                font-weight: bold;
+              }
+            }
+
+            div:first-child::after {
               display: block;
+              position: relative;
+              top: -1px;
               content: "";
-              width: 25px;
+              width: 22px;
               height: 1px;
-              margin: 1.5px 0;
               border-radius: 0.5px;
-              background-image: linear-gradient(
-                -90deg,
-                #ff3cac 0%,
-                #784ba0 50%,
-                #2b86c5 100%
-              );
+              background-color: #d8d8d8;
             }
           }
         }
