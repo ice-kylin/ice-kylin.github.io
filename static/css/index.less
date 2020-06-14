@@ -1,26 +1,22 @@
-@font-face {
-  font-family: "ikbiconfont"; /* project id 1882118 */
-  src: url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.eot");
-  src: url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.eot?#iefix")
-      format("embedded-opentype"),
-    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.woff2") format("woff2"),
-    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.woff") format("woff"),
-    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.ttf") format("truetype"),
-    url("//at.alicdn.com/t/font_1882118_zijzz9e8rii.svg#ikbiconfont")
-      format("svg");
-}
-
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
-
 html {
   width: 100%;
   min-height: 100%;
+  font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  line-height: 1.75;
+
+  .grabient-text {
+    background-color: #ff3cac;
+    background-image: linear-gradient(
+      225deg,
+      #ff3cac 0%,
+      #784ba0 50%,
+      #2b86c5 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
 
   body {
     width: 100%;
@@ -99,7 +95,7 @@ html {
             flex-grow: 1;
             flex-shrink: 0;
             margin: 18px auto;
-            min-width: 244px;
+            min-width: 150px;
             border-left: 1px #d8d8d8 solid;
 
             div {
@@ -110,7 +106,6 @@ html {
               a {
                 color: #595757;
                 font-size: 14px;
-                line-height: 1.75;
               }
             }
 
@@ -131,6 +126,36 @@ html {
               height: 1px;
               border-radius: 0.5px;
               background-color: #d8d8d8;
+            }
+          }
+
+          .horizontal-dividing-line {
+            width: 80%;
+            height: 1px;
+            margin: 18px 10%;
+            border-radius: 0.5px;
+            background-color: #d8d8d8;
+          }
+
+          #footer-copyleft {
+            width: 100%;
+            height: 62px;
+            display: flex;
+            align-items: center;
+
+            .icon-footer-copyleft {
+              width: 50px;
+              height: 50px;
+              margin: 6px;
+              flex-shrink: 0;
+            }
+
+            p {
+              display: inline-block;
+              color: #595757;
+              font-size: 12px;
+              line-height: 1.75;
+              vertical-align: middle;
             }
           }
         }
