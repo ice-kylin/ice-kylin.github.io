@@ -1,11 +1,13 @@
 html {
-  width: 100%;
-  min-height: 100%;
   font-family: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   line-height: 1.75;
 
+  width: 100%;
+  min-height: 100%;
+
   .grabient-text {
+    color: transparent;
     background-color: #ff3cac;
     background-image: linear-gradient(
       225deg,
@@ -13,9 +15,8 @@ html {
       #784ba0 50%,
       #2b86c5 100%
     );
-    background-clip: text;
     -webkit-background-clip: text;
-    color: transparent;
+    background-clip: text;
   }
 
   body {
@@ -50,12 +51,15 @@ html {
         position: relative;
 
         footer::before {
+          position: absolute;
+          z-index: -1;
+          top: 3px;
+
           width: 100%;
           height: 25px;
-          position: absolute;
-          top: 3px;
-          z-index: -1;
+
           content: "";
+
           border-top-right-radius: 25px;
           background-image: linear-gradient(
             225deg,
@@ -63,104 +67,146 @@ html {
             #784ba0 50%,
             #2b86c5 100%
           );
+
           -webkit-filter: blur(15px);
           filter: blur(15px);
         }
 
         footer {
           display: flex;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-content: space-around;
+
           width: 100%;
-          padding: 38px 62px;
+
           border-top-right-radius: 25px;
           background-color: #f5f6f7;
 
-          @media screen and (max-width: 992px) {
-            padding: 18px;
-          }
-
-          @media screen and (min-width: 2561px) {
-            border-top-left-radius: 25px;
-          }
-
-          #footer-logo {
-            width: 100%;
-            height: 62px;
-
-            .icon-footer-logo {
-              width: 50px;
-              height: 50px;
-              margin: 6px;
-            }
-          }
-
-          nav {
+          #footer-inner-wrapper {
+            display: flex;
+            align-content: space-around;
             flex-grow: 1;
-            flex-shrink: 0;
-            margin: 18px auto;
-            min-width: 150px;
-            border-left: 1px #d8d8d8 solid;
+            flex-wrap: wrap;
+            justify-content: space-around;
 
-            div {
-              padding: 0px 18px;
-              font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
-                Arial, Helvetica, sans-serif;
+            padding: 38px 0 38px 62px;
 
-              a {
-                color: #595757;
-                font-size: 14px;
+            @media screen and (max-width: 992px) {
+              padding: 18px;
+            }
+
+            @media screen and (min-width: 2561px) {
+              border-top-left-radius: 25px;
+            }
+
+            #footer-logo {
+              width: 100%;
+              height: 62px;
+
+              .icon-footer-logo {
+                width: 50px;
+                height: 50px;
+                margin: 6px;
               }
             }
 
-            div:first-child {
-              a {
-                color: #333;
-                font-size: 18px;
-                font-weight: bold;
+            nav {
+              flex-grow: 1;
+              flex-shrink: 0;
+
+              min-width: 150px;
+              margin: 18px auto;
+
+              border-left: 1px #d8d8d8 solid;
+
+              div {
+                font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
+                  Arial, Helvetica, sans-serif;
+
+                padding: 0 18px;
+
+                a {
+                  font-size: 14px;
+
+                  color: #595757;
+                }
+              }
+
+              div:first-child {
+                a {
+                  font-size: 18px;
+                  font-weight: bold;
+
+                  color: #333;
+                }
+              }
+
+              div:first-child::after {
+                position: relative;
+                top: -1px;
+
+                display: block;
+
+                width: 22px;
+                height: 1px;
+
+                content: "";
+
+                border-radius: 0.5px;
+                background-color: #d8d8d8;
               }
             }
 
-            div:first-child::after {
-              display: block;
-              position: relative;
-              top: -1px;
-              content: "";
-              width: 22px;
+            .horizontal-dividing-line {
+              width: 75%;
               height: 1px;
+              margin: 18px 12.5%;
+
               border-radius: 0.5px;
               background-color: #d8d8d8;
             }
+
+            #footer-copyleft {
+              display: flex;
+              align-items: center;
+
+              width: 100%;
+
+              .icon-footer-copyleft {
+                flex-shrink: 0;
+
+                width: 50px;
+                height: 50px;
+                margin: 6px;
+              }
+
+              p {
+                font-size: 12px;
+                line-height: 1.75;
+
+                display: inline-block;
+
+                vertical-align: middle;
+
+                color: #595757;
+              }
+            }
           }
 
-          .horizontal-dividing-line {
-            width: 75%;
-            height: 1px;
-            margin: 18px 12.5%;
-            border-radius: 0.5px;
-            background-color: #d8d8d8;
-          }
-
-          #footer-copyleft {
-            width: 100%;
-            height: 62px;
+          #footer-socialmedia {
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            flex-shrink: 0;
+            justify-content: center;
 
-            .icon-footer-copyleft {
-              width: 50px;
-              height: 50px;
-              margin: 6px;
-              flex-shrink: 0;
+            width: 62px;
+            height: inherit;
+            padding-right: 18px;
+
+            @media screen and (max-width: 992px) {
+              display: none;
             }
 
-            p {
-              display: inline-block;
-              color: #595757;
-              font-size: 12px;
-              line-height: 1.75;
-              vertical-align: middle;
+            .icon-footer-socialmedia {
+              font-size: 26px;
             }
           }
         }
