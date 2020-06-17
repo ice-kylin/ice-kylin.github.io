@@ -151,8 +151,26 @@ html {
               }
             }
 
+            #footer-nav-msg {
+              width: 100%;
+              padding: 0 18px;
+
+              @media screen and (max-width: 992px) {
+                display: none;
+              }
+
+              .icon-footer-nav-msg {
+                font-size: 20px;
+
+                padding: 0 5px;
+
+                color: #6a737d;
+              }
+            }
+
             #footer-nav-socialmedia {
               width: 100%;
+              margin: 18px auto 0 auto;
               padding: 0 18px;
 
               @media screen and (min-width: 991px) {
@@ -168,13 +186,18 @@ html {
               }
             }
 
-            #footer-nav-msg {
-              font-size: 14px;
+            #footer-nav-text-msg {
+              font-size: 12px;
 
               width: 100%;
+              margin: 0 auto 18px auto;
               padding: 0 18px;
 
               color: #6a737d;
+
+              @media screen and (min-width: 991px) {
+                display: none;
+              }
 
               a {
                 color: #6a737d;
