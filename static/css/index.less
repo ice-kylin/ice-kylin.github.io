@@ -1,16 +1,33 @@
+@black-title-text: #333;
+@black-p-text: #586069;
+@black-a-text: #595757;
+@black-a-icon: #6a737d;
+//
+@white-footer-background: #f9fafb;
+@white-border: #d8d8d8;
+//
+@ultra-black-title-text: #586069;
+@ultra-black-p-text: #586069;
+@ultra-black-a-text: #6a737d;
+@ultra-black-a-icon: #6a737d;
+//
+.grabient {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+}
+
 html {
   width: 100%;
   min-height: 100%;
 
   .grabient-text {
     color: transparent;
-    background-color: #ff3cac;
-    background-image: linear-gradient(
-      225deg,
-      #ff3cac 0%,
-      #784ba0 50%,
-      #2b86c5 100%
-    );
+    .grabient();
     -webkit-background-clip: text;
     background-clip: text;
   }
@@ -57,12 +74,7 @@ html {
           content: "";
 
           border-top-right-radius: 25px;
-          background-image: linear-gradient(
-            225deg,
-            #ff3cac 0%,
-            #784ba0 50%,
-            #2b86c5 100%
-          );
+          .grabient();
 
           -webkit-filter: blur(15px);
           filter: blur(15px);
@@ -78,7 +90,7 @@ html {
           width: 100%;
 
           border-top-right-radius: 25px;
-          background-color: #f9fafb;
+          background-color: @white-footer-background;
 
           @media screen and (min-width: 1281px) {
             background-color: transparent;
@@ -127,7 +139,7 @@ html {
               min-width: 150px;
               margin: 18px auto;
 
-              border-left: 1px #d8d8d8 solid;
+              border-left: 1px @white-border solid;
 
               div {
                 font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
@@ -138,7 +150,11 @@ html {
                 a {
                   font-size: 14px;
 
-                  color: #6a737d;
+                  color: @black-a-text;
+
+                  @media screen and (min-width: 1281px) {
+                    color: @ultra-black-a-text;
+                  }
                 }
               }
 
@@ -147,7 +163,11 @@ html {
                   font-size: 18px;
                   font-weight: bold;
 
-                  color: #586069;
+                  color: @black-title-text;
+
+                  @media screen and (min-width: 1281px) {
+                    color: @ultra-black-title-text;
+                  }
                 }
               }
 
@@ -163,7 +183,7 @@ html {
                 content: "";
 
                 border-radius: 0.5px;
-                background-color: #d8d8d8;
+                background-color: @white-border;
               }
             }
 
@@ -180,7 +200,7 @@ html {
 
                 padding: 0 5px;
 
-                color: #6a737d;
+                color: @black-a-icon;
               }
             }
 
@@ -198,7 +218,11 @@ html {
 
                 padding: 0 5px;
 
-                color: #6a737d;
+                color: @black-a-icon;
+
+                @media screen and (min-width: 1281px) {
+                  color: @ultra-black-a-icon;
+                }
               }
             }
 
@@ -209,14 +233,22 @@ html {
               margin: 0 auto 18px auto;
               padding: 0 18px;
 
-              color: #6a737d;
+              color: @black-a-text;
+
+              @media screen and (min-width: 1281px) {
+                color: @ultra-black-a-text;
+              }
 
               @media screen and (min-width: 992px) {
                 display: none;
               }
 
               a {
-                color: #6a737d;
+                color: @black-a-text;
+
+                @media screen and (min-width: 1281px) {
+                  color: @ultra-black-a-text;
+                }
               }
             }
 
@@ -226,7 +258,7 @@ html {
               margin: 18px 12.5%;
 
               border-radius: 0.5px;
-              background-color: #d8d8d8;
+              background-color: @white-border;
             }
 
             #footer-copyleft {
@@ -251,7 +283,11 @@ html {
 
                 vertical-align: middle;
 
-                color: #586069;
+                color: @black-p-text;
+
+                @media screen and (min-width: 1281px) {
+                  color: @ultra-black-p-text;
+                }
               }
             }
           }
@@ -273,7 +309,11 @@ html {
             .icon-footer-socialmedia {
               font-size: 20px;
 
-              color: #6a737d;
+              color: @black-a-icon;
+
+              @media screen and (min-width: 1281px) {
+                color: @ultra-black-a-icon;
+              }
             }
           }
         }
