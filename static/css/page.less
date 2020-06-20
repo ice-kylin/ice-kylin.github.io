@@ -1,0 +1,102 @@
+@black-title-text: #333;
+@black-p-text: #586069;
+@black-a-text: #595757;
+@black-a-icon: #6a737d;
+//
+@white-footer-background: #f9fafb;
+@white-border: #d8d8d8;
+//
+@ultra-black-title-text: #586069;
+@ultra-black-p-text: #586069;
+@ultra-black-a-text: #6a737d;
+@ultra-black-a-icon: #6a737d;
+//
+@morandi-color-1: #bfb1cc;
+@morandi-color-2: #aec6d4;
+@morandi-color-3: #adc7af;
+@morandi-color-4: #d6c9ad;
+@morandi-color-5: #debdb6;
+@morandi-color-6: #d9bdc5;
+//
+html {
+  body {
+    #page {
+      #article-wrapper {
+        position: relative;
+
+        article {
+          width: 62%;
+          margin: 0 auto 64px;
+
+          #h1-wrapper {
+            h1 {
+              font-size: 48px;
+
+              position: relative;
+
+              display: inline-block;
+
+              background-color: #fff;
+
+              &::after {
+                position: absolute;
+                z-index: -1;
+                top: -20px;
+                right: -62px;
+
+                width: 100px;
+                height: 100px;
+
+                content: "";
+
+                border: 1px @morandi-color-2 solid;
+              }
+            }
+          }
+
+          #article-msg {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: start;
+
+            margin: 18px 0;
+
+            #article-date {
+              font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo,
+                Courier, monospace;
+              font-size: 14px;
+
+              width: 100%;
+              margin: 8px 0;
+
+              color: #959da5;
+            }
+
+            #article-avatar {
+              flex-shrink: 0;
+
+              width: 32px;
+              height: 32px;
+            }
+
+            #article-author {
+              line-height: 32px;
+
+              padding: 0 16px;
+
+              vertical-align: middle;
+
+              color: @black-p-text;
+            }
+          }
+
+          p {
+            font-size: 16px;
+
+            margin: 16px 0;
+          }
+        }
+      }
+    }
+  }
+}
