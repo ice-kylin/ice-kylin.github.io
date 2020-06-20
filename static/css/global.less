@@ -1,0 +1,49 @@
+@black-title-text: #333;
+@black-p-text: #586069;
+@black-a-text: #595757;
+@black-a-icon: #6a737d;
+//
+@white-footer-background: #f9fafb;
+@white-border: #d8d8d8;
+//
+@ultra-black-title-text: #586069;
+@ultra-black-p-text: #586069;
+@ultra-black-a-text: #6a737d;
+@ultra-black-a-icon: #6a737d;
+//
+@morandi-color-1: #bfb1cc;
+@morandi-color-2: #aec6d4;
+@morandi-color-3: #adc7af;
+@morandi-color-4: #d6c9ad;
+@morandi-color-5: #debdb6;
+@morandi-color-6: #d9bdc5;
+//
+.grabient {
+  background-color: #ff3cac;
+  background-image: linear-gradient(
+    225deg,
+    #ff3cac 0%,
+    #784ba0 50%,
+    #2b86c5 100%
+  );
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+
+  .grabient-text {
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    .grabient();
+  }
+
+  #page {
+    width: 100%;
+    max-width: 2560px;
+    min-height: 100%;
+    margin: 0 auto;
+  }
+}
