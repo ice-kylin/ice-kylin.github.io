@@ -27,6 +27,12 @@
     #2b86c5 100%
   );
 }
+//
+.open-sans {
+  font-family: "Open Sans", "Clear Sans", "Helvetica Neue", "Helvetica", "Arial",
+    "sans-serif", -apple-system, "BlinkMacSystemFont", "Microsoft YaHei";
+}
+//
 
 html {
   body {
@@ -113,9 +119,6 @@ html {
               border-left: 1px @white-border solid;
 
               div {
-                font-family: -apple-system, BlinkMacSystemFont, Microsoft YaHei,
-                  Arial, Helvetica, sans-serif;
-
                 padding: 0 18px;
 
                 &:first-child {
@@ -255,6 +258,8 @@ html {
                 vertical-align: middle;
 
                 color: @black-p-text;
+
+                .open-sans();
 
                 @media screen and (min-width: 1281px) {
                   color: @ultra-black-p-text;
