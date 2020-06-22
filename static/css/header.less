@@ -11,22 +11,22 @@
 @ultra-black-a-text: #6a737d;
 @ultra-black-a-icon: #6a737d;
 //
-@morandi-color-1: #bfb1cc;
-@morandi-color-2: #aec6d4;
-@morandi-color-3: #adc7af;
-@morandi-color-4: #d6c9ad;
-@morandi-color-5: #debdb6;
-@morandi-color-6: #d9bdc5;
-//
+
 html {
   body {
     #page {
       #header-wrapper {
         width: 100%;
+        margin-bottom: 32px;
+
+        background-color: #fff;
+
+        @media screen and (max-width: 767px) {
+          margin-bottom: 14px;
+        }
 
         header {
           line-height: 64px;
-          // background-color: @morandi-color-2;
 
           display: flex;
           justify-content: space-between;
@@ -37,7 +37,7 @@ html {
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 
           #header-logo {
-            font-family: Pacifico;
+            font-family: "Pacifico";
             font-size: 18px;
 
             flex-shrink: 0;

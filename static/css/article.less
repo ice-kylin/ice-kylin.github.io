@@ -11,24 +11,16 @@
 @ultra-black-a-text: #6a737d;
 @ultra-black-a-icon: #6a737d;
 //
-@morandi-color-1: #bfb1cc;
-@morandi-color-2: #aec6d4;
-@morandi-color-3: #adc7af;
-@morandi-color-4: #d6c9ad;
-@morandi-color-5: #debdb6;
-@morandi-color-6: #d9bdc5;
-//
+
 html {
   body {
     #page {
       #article-wrapper {
-        position: relative;
-
         width: 100%;
-        margin: 64px 0;
+        margin: 32px 0 32px;
 
         @media screen and (max-width: 767px) {
-          margin: 0;
+          margin: 14px 0 14px;
         }
 
         article {
@@ -38,65 +30,67 @@ html {
           margin: 0 auto;
 
           border-radius: 5px;
+          background-color: #fff;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.1);
 
           @media screen and (max-width: 767px) {
-            width: 100%;
-
-            border-radius: 0;
+            width: auto;
+            margin: 0 14px;
           }
 
           #h1-wrapper {
             width: 100%;
-            height: 256px;
 
-            background-image: url(../img/qiuye.jpg);
+            #h1-img {
+              width: 100%;
+              margin-bottom: 32px;
+
+              object-fit: cover;
+            }
 
             h1 {
-              font-size: 48px;
+              font-size: 36px;
 
               position: relative;
               z-index: 10;
-              top: 156px;
-              left: 16px;
 
               display: inline-block;
+
+              padding-left: 22px;
+
+              background-color: #fff;
 
               &::before {
                 position: absolute;
                 z-index: -20;
-                top: -20px;
-                right: -62px;
+                top: -14px;
+                right: -16px;
 
-                width: 100px;
-                height: 100px;
+                width: 75px;
+                height: 75px;
 
                 content: "";
 
-                border: 1px @morandi-color-2 solid;
+                border: 1px #959da5 solid;
               }
 
               &::after {
                 position: absolute;
                 z-index: -10;
-                top: 18px;
+                top: 0;
                 right: 0;
-                bottom: 18px;
+                bottom: 0;
                 left: 0;
-
-                display: block;
 
                 content: "";
 
-                border-radius: 3px;
-                background-color: @morandi-color-4;
+                background-color: #fff;
               }
             }
           }
 
           #article-inner-wrapper {
-            @media screen and (max-width: 767px) {
-              padding: 0 16px;
-            }
+            padding: 0 22px;
 
             #article-msg {
               display: flex;
@@ -106,8 +100,8 @@ html {
               margin: 18px 0;
 
               #article-date {
-                font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo,
-                  Courier, monospace;
+                font-family: "SFMono-Regular", "Consolas", "Liberation Mono",
+                  "Menlo", "Courier", "monospace";
                 font-size: 14px;
 
                 width: 100%;
@@ -135,7 +129,7 @@ html {
             }
 
             p {
-              font-size: 16px;
+              font-size: 15.4px;
 
               margin: 16px 0;
             }

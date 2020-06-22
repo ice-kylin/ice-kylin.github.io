@@ -11,13 +11,7 @@
 @ultra-black-a-text: #6a737d;
 @ultra-black-a-icon: #6a737d;
 //
-@morandi-color-1: #bfb1cc;
-@morandi-color-2: #aec6d4;
-@morandi-color-3: #adc7af;
-@morandi-color-4: #d6c9ad;
-@morandi-color-5: #debdb6;
-@morandi-color-6: #d9bdc5;
-//
+
 .grabient {
   background-color: #ff3cac;
   background-image: linear-gradient(
@@ -39,6 +33,12 @@ html {
     #page {
       #footer-wrapper {
         position: relative;
+
+        margin-top: 32px;
+
+        @media screen and (max-width: 767px) {
+          margin-top: 14px;
+        }
 
         footer {
           display: flex;
@@ -87,6 +87,8 @@ html {
             }
 
             #footer-logo {
+              font-family: "Pacifico";
+
               width: 100%;
               height: 62px;
 
@@ -96,16 +98,6 @@ html {
                 margin: 18px auto;
               }
 
-              .icon-footer-logo {
-                width: 50px;
-                height: 50px;
-                margin: 6px;
-
-                @media screen and (min-width: 1281px) {
-                  width: 100px;
-                  height: 100px;
-                  margin: 22px;
-                }
               }
             }
 
@@ -115,8 +107,6 @@ html {
 
               min-width: 150px;
               margin: 18px auto;
-
-              border-left: 1px @white-border solid;
 
               div {
                 padding: 0 18px;
@@ -240,14 +230,6 @@ html {
               align-items: center;
 
               width: 100%;
-
-              .icon-footer-copyleft {
-                flex-shrink: 0;
-
-                width: 50px;
-                height: 50px;
-                margin: 6px;
-              }
 
               p {
                 font-size: 12px;
