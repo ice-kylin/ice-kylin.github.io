@@ -35,23 +35,19 @@ html {
         position: relative;
 
         margin-top: 32px;
-
         @media screen and (max-width: 767px) {
           margin-top: 14px;
         }
-
         footer {
           display: flex;
 
           width: 100%;
 
           border-top-right-radius: 25px;
-          background-color: @white-footer-background;
-
-          @media screen and (min-width: 1281px) {
-            background-color: #fff;
+          background-color: #fff;
+          @media screen and (min-width: 2561px) {
+            border-top-left-radius: 25px;
           }
-
           &::before {
             position: absolute;
             z-index: -1;
@@ -65,10 +61,19 @@ html {
             border-top-right-radius: 25px;
 
             .grabient();
+
             -webkit-filter: blur(15px);
             filter: blur(15px);
-          }
+            @media screen and (min-width: 2561px) {
+              right: 0;
+              left: 0;
 
+              width: 2545px;
+              margin: 0 auto;
+
+              border-top-left-radius: 25px;
+            }
+          }
           #footer-inner-wrapper {
             display: flex;
             align-content: space-around;
@@ -77,44 +82,36 @@ html {
             justify-content: space-around;
 
             padding: 38px 0 18px 62px;
-
             @media screen and (max-width: 991px) {
               padding: 18px;
             }
-
             #footer-logo {
               font-family: "Pacifico";
 
               width: 100%;
               height: 62px;
               padding-left: 18px;
-
-              @media screen and (min-width: 1281px) {
+              @media screen and (min-width: 1280px) {
                 width: 38%;
                 height: 144px;
                 margin: 18px auto;
               }
-
               @media screen and (max-width: 991px) {
                 line-height: 38px;
 
                 height: 38px;
               }
-
               @media screen and (max-width: 425px) {
                 height: auto;
                 padding-left: 0;
 
                 text-align: center;
               }
-
               #footer-logo-msg {
                 width: 100%;
-
-                @media screen and (max-width: 1280px) {
+                @media screen and (max-width: 1279px) {
                   display: none;
                 }
-
                 .icon-footer-logo-msg {
                   font-size: 16px;
 
@@ -125,17 +122,14 @@ html {
               }
             }
           }
-
           nav {
             flex-grow: 1;
             flex-shrink: 0;
 
             min-width: 150px;
             margin: 18px auto;
-
             div {
               padding: 0 18px;
-
               &:first-child {
                 &::after {
                   position: relative;
@@ -151,63 +145,52 @@ html {
                   border-radius: 0.5px;
                   background-color: @white-border;
                 }
-
                 a {
                   font-size: 18px;
                   font-weight: bold;
 
                   color: @black-title-text;
-
-                  @media screen and (min-width: 1281px) {
+                  @media screen and (min-width: 1280px) {
                     color: @ultra-black-title-text;
                   }
                 }
               }
-
               a {
                 font-size: 14px;
 
                 color: @black-a-text;
-
-                @media screen and (min-width: 1281px) {
+                @media screen and (min-width: 1280px) {
                   color: @ultra-black-a-text;
                 }
               }
             }
           }
-
           .footer-nav-nav {
             @media screen and (max-width: 425px) {
               display: none;
             }
           }
-
           #footer-nav-socialmedia {
             width: 100%;
             margin: 18px auto 0 auto;
             padding: 0 18px;
-
             @media screen and (min-width: 992px) {
               display: none;
             }
-
             @media screen and (max-width: 425px) {
               text-align: center;
             }
-
             .icon-footer-nav-socialmedia {
               font-size: 20px;
 
               padding: 0 5px;
 
               color: @black-a-icon;
-
-              @media screen and (min-width: 1281px) {
+              @media screen and (min-width: 1280px) {
                 color: @ultra-black-a-icon;
               }
             }
           }
-
           #footer-nav-text-msg {
             font-size: 12px;
 
@@ -216,28 +199,22 @@ html {
             padding: 0 18px;
 
             color: @black-a-text;
-
-            @media screen and (min-width: 1281px) {
+            @media screen and (min-width: 1280px) {
               color: @ultra-black-a-text;
             }
-
             @media screen and (min-width: 992px) {
               display: none;
             }
-
             @media screen and (max-width: 425px) {
               text-align: center;
             }
-
             a {
               color: @black-a-text;
-
-              @media screen and (min-width: 1281px) {
+              @media screen and (min-width: 1280px) {
                 color: @ultra-black-a-text;
               }
             }
           }
-
           .horizontal-dividing-line {
             width: 75%;
             height: 1px;
@@ -246,14 +223,12 @@ html {
             border-radius: 0.5px;
             background-color: @white-border;
           }
-
           #footer-copyleft {
             display: flex;
             align-items: center;
 
             width: 100%;
             padding: 0 18px;
-
             p {
               font-size: 12px;
               line-height: 1.75;
@@ -265,14 +240,12 @@ html {
               color: @black-p-text;
 
               .open-sans();
-
-              @media screen and (min-width: 1281px) {
+              @media screen and (min-width: 1280px) {
                 color: @ultra-black-p-text;
               }
             }
           }
         }
-
         #footer-socialmedia {
           display: flex;
           flex-direction: column;
@@ -282,17 +255,14 @@ html {
           width: 62px;
           height: inherit;
           padding: 38px 18px 18px 0;
-
           @media screen and (max-width: 991px) {
             display: none;
           }
-
           .icon-footer-socialmedia {
             font-size: 20px;
 
             color: @black-a-icon;
-
-            @media screen and (min-width: 1281px) {
+            @media screen and (min-width: 1280px) {
               color: @ultra-black-a-icon;
             }
           }

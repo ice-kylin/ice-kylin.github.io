@@ -18,13 +18,9 @@ html {
       #header-wrapper {
         width: 100%;
         margin-bottom: 32px;
-
-        background-color: #fff;
-
         @media screen and (max-width: 767px) {
           margin-bottom: 14px;
         }
-
         header {
           line-height: 64px;
 
@@ -34,8 +30,12 @@ html {
           width: 100%;
           height: 64px;
 
+          background-color: #fff;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
+          @media screen and (min-width: 2561px) {
+            border-bottom-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+          }
           #header-logo {
             font-family: "Pacifico";
             font-size: 18px;
@@ -43,22 +43,18 @@ html {
             flex-shrink: 0;
 
             padding: 0 32px;
-
             @media screen and (max-width: 425px) {
               padding: 0 18px;
             }
           }
-
           #header-categorys {
             display: flex;
 
             width: 62%;
             padding: 0 32px;
-
             @media screen and (max-width: 425px) {
               display: none;
             }
-
             .header-category {
               flex-grow: 1;
               flex-shrink: 0;

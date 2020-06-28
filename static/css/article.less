@@ -18,36 +18,34 @@ html {
       #article-wrapper {
         width: 100%;
         margin: 32px 0 32px;
-
         @media screen and (max-width: 767px) {
           margin: 14px 0 14px;
         }
-
         article {
           overflow: hidden;
 
           width: 62%;
+          max-width: 1190px;
           margin: 0 auto;
 
           border-radius: 5px;
           background-color: #fff;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.1);
-
           @media screen and (max-width: 767px) {
             width: auto;
             margin: 0 14px;
           }
-
           #h1-wrapper {
             width: 100%;
-
             #h1-img {
               width: 100%;
               margin-bottom: 32px;
 
               object-fit: cover;
+              img {
+                width: 100%;
+              }
             }
-
             h1 {
               font-size: 36px;
 
@@ -59,7 +57,9 @@ html {
               padding-left: 22px;
 
               background-color: #fff;
-
+              @media screen and (min-width: 1280px) {
+                padding-left: 48px;
+              }
               &::before {
                 position: absolute;
                 z-index: -20;
@@ -73,7 +73,6 @@ html {
 
                 border: 1px #959da5 solid;
               }
-
               &::after {
                 position: absolute;
                 z-index: -10;
@@ -88,17 +87,17 @@ html {
               }
             }
           }
-
           #article-inner-wrapper {
             padding: 0 22px;
-
+            @media screen and (min-width: 1280px) {
+              padding: 0 48px;
+            }
             #article-msg {
               display: flex;
               flex-wrap: wrap;
               justify-content: start;
 
               margin: 18px 0;
-
               #article-date {
                 font-family: "SFMono-Regular", "Consolas", "Liberation Mono",
                   "Menlo", "Courier", "monospace";
@@ -109,14 +108,12 @@ html {
 
                 color: #959da5;
               }
-
               #article-avatar {
                 flex-shrink: 0;
 
                 width: 32px;
                 height: 32px;
               }
-
               #article-author {
                 line-height: 32px;
 
@@ -127,7 +124,6 @@ html {
                 color: @black-p-text;
               }
             }
-
             p {
               font-size: 15.4px;
 
