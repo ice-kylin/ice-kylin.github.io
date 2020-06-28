@@ -129,6 +129,50 @@ html {
 
               margin: 16px 0;
             }
+            #article-tags {
+              display: flex;
+              flex-wrap: wrap;
+
+              margin: 16px 0 8px 0;
+              #article-tags-info {
+                font-size: 16px;
+
+                margin-right: 16px;
+
+                color: #7a7a7a;
+              }
+              .article-tags-tag {
+                font-size: 12px;
+                line-height: 28px;
+
+                flex-shrink: 0;
+
+                margin: 0 8px 8px 0;
+                padding: 0 12px;
+
+                border-radius: 12px;
+                background-color: #f1f8ff;
+                &:hover {
+                  background-color: #def;
+                }
+                a {
+                  color: #0366d6;
+                }
+              }
+            }
+            #article-lastupdate {
+              margin: 8px 0 16px 0;
+
+              color: #7a7a7a;
+              .icon-article-lastupdate {
+                font-size: 16px;
+
+                margin-right: 16px;
+              }
+              span {
+                font-size: 12px;
+              }
+            }
           }
         }
       }
