@@ -35,56 +35,67 @@ html {
             width: auto;
             margin: 0 14px;
           }
-          #h1-wrapper {
-            width: 100%;
-            #h1-img {
-              width: 100%;
-              margin-bottom: 32px;
+          #h1-img-wrapper {
+            position: relative;
 
-              object-fit: cover;
+            height: 0;
+            padding-bottom: 42.8%;
+            #h1-img {
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              overflow: hidden;
+
+              width: 100%;
+              height: 100%;
               img {
                 width: 100%;
+                height: 100%;
+
+                object-fit: cover;
               }
             }
-            h1 {
-              font-size: 36px;
+          }
+          h1 {
+            font-size: 36px;
 
-              position: relative;
-              z-index: 10;
+            position: relative;
+            z-index: 10;
 
-              display: inline-block;
+            display: inline-block;
 
-              padding-left: 22px;
+            margin-top: 44px;
+            padding-left: 22px;
+
+            background-color: #fff;
+            @media screen and (min-width: 1280px) {
+              padding-left: 48px;
+            }
+            &::before {
+              position: absolute;
+              z-index: -20;
+              top: -14px;
+              right: -16px;
+
+              width: 75px;
+              height: 75px;
+
+              content: "";
+
+              border: 1px #959da5 solid;
+            }
+            &::after {
+              position: absolute;
+              z-index: -10;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+
+              content: "";
 
               background-color: #fff;
-              @media screen and (min-width: 1280px) {
-                padding-left: 48px;
-              }
-              &::before {
-                position: absolute;
-                z-index: -20;
-                top: -14px;
-                right: -16px;
-
-                width: 75px;
-                height: 75px;
-
-                content: "";
-
-                border: 1px #959da5 solid;
-              }
-              &::after {
-                position: absolute;
-                z-index: -10;
-                top: 0;
-                right: 0;
-                bottom: 0;
-                left: 0;
-
-                content: "";
-
-                background-color: #fff;
-              }
             }
           }
           #article-inner-wrapper {
@@ -121,7 +132,7 @@ html {
 
                 vertical-align: middle;
 
-                color: @black-p-text;
+                color: #7a7a7a;
               }
             }
             p {
