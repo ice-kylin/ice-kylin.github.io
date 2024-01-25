@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-Light.otf') format('opentype');
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-LightItalic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-Semibold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'KpRoman';
+    src: url('/font/KpRoman-SemiboldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpSans';
+    src: url('/font/KpSans-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'KpSans';
+    src: url('/font/KpSans-BoldItalic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpSans';
+    src: url('/font/KpSans-Italic.otf') format('opentype');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'KpSans';
+    src: url('/font/KpSans-Regular.otf') format('opentype');
+}

@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	/* theme */
+	:root,
+	html[data-theme='light'] {
+		--md-sys-color-primary: 102 85 142;
+		--md-sys-color-surface-tint: 102 85 142;
+		--md-sys-color-on-primary: 255 255 255;
+		--md-sys-color-primary-container: 234 221 255;
+		--md-sys-color-on-primary-container: 34 15 70;
+		--md-sys-color-secondary: 98 91 112;
+		--md-sys-color-on-secondary: 255 255 255;
+		--md-sys-color-secondary-container: 233 222 248;
+		--md-sys-color-on-secondary-container: 30 25 43;
+		--md-sys-color-tertiary: 126 82 95;
+		--md-sys-color-on-tertiary: 255 255 255;
+		--md-sys-color-tertiary-container: 255 217 226;
+		--md-sys-color-on-tertiary-container: 49 16 28;
+		--md-sys-color-error: 186 26 26;
+		--md-sys-color-on-error: 255 255 255;
+		--md-sys-color-error-container: 255 218 214;
+		--md-sys-color-on-error-container: 65 0 2;
+		--md-sys-color-background: 254 247 255;
+		--md-sys-color-on-background: 29 27 32;
+		--md-sys-color-surface: 254 247 255;
+		--md-sys-color-on-surface: 29 27 32;
+		--md-sys-color-surface-variant: 231 224 235;
+		--md-sys-color-on-surface-variant: 73 69 78;
+		--md-sys-color-outline: 122 117 127;
+		--md-sys-color-outline-variant: 203 196 207;
+		--md-sys-color-shadow: 0 0 0;
+		--md-sys-color-scrim: 0 0 0;
+		--md-sys-color-inverse-surface: 50 47 53;
+		--md-sys-color-inverse-on-surface: 245 239 247;
+		--md-sys-color-inverse-primary: 209 188 253;
+		--md-sys-color-primary-fixed: 234 221 255;
+		--md-sys-color-on-primary-fixed: 34 15 70;
+		--md-sys-color-primary-fixed-dim: 209 188 253;
+		--md-sys-color-on-primary-fixed-variant: 78 61 117;
+		--md-sys-color-secondary-fixed: 233 222 248;
+		--md-sys-color-on-secondary-fixed: 30 25 43;
+		--md-sys-color-secondary-fixed-dim: 204 194 219;
+		--md-sys-color-on-secondary-fixed-variant: 74 67 88;
+		--md-sys-color-tertiary-fixed: 255 217 226;
+		--md-sys-color-on-tertiary-fixed: 49 16 28;
+		--md-sys-color-tertiary-fixed-dim: 240 184 198;
+		--md-sys-color-on-tertiary-fixed-variant: 100 59 71;
+		--md-sys-color-surface-dim: 222 216 224;
+		--md-sys-color-surface-bright: 254 247 255;
+		--md-sys-color-surface-container-lowest: 255 255 255;
+		--md-sys-color-surface-container-low: 248 241 250;
+		--md-sys-color-surface-container: 242 236 244;
+		--md-sys-color-surface-container-high: 236 230 238;
+		--md-sys-color-surface-container-highest: 231 224 232;
+		--wb: 255 255 255;
+		--g: linear-gradient(180deg, #fdfbfb 0%, #ebedee 100%);
+	}
+
+	html[data-theme='dark'] {
+		--md-sys-color-primary: 209 188 253;
+		--md-sys-color-surface-tint: 209 188 253;
+		--md-sys-color-on-primary: 55 38 93;
+		--md-sys-color-primary-container: 78 61 117;
+		--md-sys-color-on-primary-container: 234 221 255;
+		--md-sys-color-secondary: 204 194 219;
+		--md-sys-color-on-secondary: 51 45 65;
+		--md-sys-color-secondary-container: 74 67 88;
+		--md-sys-color-on-secondary-container: 233 222 248;
+		--md-sys-color-tertiary: 240 184 198;
+		--md-sys-color-on-tertiary: 74 37 49;
+		--md-sys-color-tertiary-container: 100 59 71;
+		--md-sys-color-on-tertiary-container: 255 217 226;
+		--md-sys-color-error: 255 180 171;
+		--md-sys-color-on-error: 105 0 5;
+		--md-sys-color-error-container: 147 0 10;
+		--md-sys-color-on-error-container: 255 218 214;
+		--md-sys-color-background: 20 18 24;
+		--md-sys-color-on-background: 231 224 232;
+		--md-sys-color-surface: 20 18 24;
+		--md-sys-color-on-surface: 231 224 232;
+		--md-sys-color-surface-variant: 73 69 78;
+		--md-sys-color-on-surface-variant: 203 196 207;
+		--md-sys-color-outline: 148 143 153;
+		--md-sys-color-outline-variant: 73 69 78;
+		--md-sys-color-shadow: 0 0 0;
+		--md-sys-color-scrim: 0 0 0;
+		--md-sys-color-inverse-surface: 231 224 232;
+		--md-sys-color-inverse-on-surface: 50 47 53;
+		--md-sys-color-inverse-primary: 102 85 142;
+		--md-sys-color-primary-fixed: 234 221 255;
+		--md-sys-color-on-primary-fixed: 34 15 70;
+		--md-sys-color-primary-fixed-dim: 209 188 253;
+		--md-sys-color-on-primary-fixed-variant: 78 61 117;
+		--md-sys-color-secondary-fixed: 233 222 248;
+		--md-sys-color-on-secondary-fixed: 30 25 43;
+		--md-sys-color-secondary-fixed-dim: 204 194 219;
+		--md-sys-color-on-secondary-fixed-variant: 74 67 88;
+		--md-sys-color-tertiary-fixed: 255 217 226;
+		--md-sys-color-on-tertiary-fixed: 49 16 28;
+		--md-sys-color-tertiary-fixed-dim: 240 184 198;
+		--md-sys-color-on-tertiary-fixed-variant: 100 59 71;
+		--md-sys-color-surface-dim: 20 18 24;
+		--md-sys-color-surface-bright: 59 56 62;
+		--md-sys-color-surface-container-lowest: 15 13 19;
+		--md-sys-color-surface-container-low: 29 27 32;
+		--md-sys-color-surface-container: 33 31 36;
+		--md-sys-color-surface-container-high: 43 41 47;
+		--md-sys-color-surface-container-highest: 54 52 58;
+		--wb: 0 0 0;
+		--g: linear-gradient(180deg, #434343 0%, #000000 100%);
+	}
+
+	html {
+		--gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+	}
+
+	.small-caps {
+		font-variant: small-caps;
+	}
+
+	.superellipse {
+		mask-image: paint(smooth-corners);
+		-webkit-mask-image: paint(smooth-corners);
+	}
+}
