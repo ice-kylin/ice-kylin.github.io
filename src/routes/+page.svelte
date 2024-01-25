@@ -1,15 +1,19 @@
 <script lang="ts">
 	import img from '../assets/photos/IMG_20240122_154122931.jpg';
+	import Sparkles from '../lib/icon/sparkles.svelte';
 </script>
 
 <div class="flex justify-between items-center font-art flex-wrap">
-	<h1 class="small-caps text-3xl">
-		Hi, I'm
-		<br />
+	<div class="flex flex-col gap-4">
+		<div class="flex items-center gap-2">
+			<span class="small-caps text-3xl"> Hi, I'm </span>
+			<Sparkles></Sparkles>
+		</div>
 		<span class="small-caps text-5xl">IceKylin</span>
-	</h1>
-
-	<p class="font-serif small-caps whitespace-nowrap">Code Changes The World.</p>
+	</div>
+	<div class="pr-6">
+		<p class="font-serif small-caps whitespace-nowrap">Code Changes The World.</p>
+	</div>
 </div>
 
 <div class="max-w-3xl font-serif">

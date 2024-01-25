@@ -72,7 +72,21 @@ export default {
 				wb: 'rgb(var(--wb) / <alpha-value>)'
 			},
 			fontFamily: {
-				sans: [...defaultTheme.fontFamily.sans],
+				sans: [
+					'Inter',
+					'HarmonyOS Sans SC',
+					'PingFang SC',
+					'Helvetica Neue',
+					'Microsoft YaHei',
+					'ui-sans-serif',
+					'system-ui',
+					'sans-serif',
+					'Apple Color Emoji',
+					'Segoe UI Emoji',
+					'Segoe UI Symbol',
+					'Noto Color Emoji',
+					...defaultTheme.fontFamily.sans
+				],
 				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
 				art: ['KpSans', ...defaultTheme.fontFamily.sans]
 			}

@@ -13,7 +13,7 @@
 <div class="flex gap-2 overflow-scroll mt-6">
 	<div class="w-4 md:w-10 shrink-0"></div>
 	<Button
-		label="Home"
+		label="主页"
 		types="primary"
 		size="md"
 		backgroundColorClass="bg-surfaceContainer"
@@ -21,20 +21,23 @@
 	>
 		<Icon data={homeRoof} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
-	<Button label="Category" types="ghost" size="md" textColorClass="text-onSurface">
+	<Button label="分类" types="ghost" size="md" textColorClass="text-onSurface">
 		<Icon data={inboxMultipleOutline} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
-	<Button label="Time Line" types="ghost" size="md" textColorClass="text-onSurface">
+	<Button label="时间轴" types="ghost" size="md" textColorClass="text-onSurface">
 		<Icon data={clockTimeTwelveOutline} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
-	<Button label="Photos" types="ghost" size="md" textColorClass="text-onSurface">
+	<Button label="照片" types="ghost" size="md" textColorClass="text-onSurface">
 		<Icon data={imageFilterHdrOutline} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
-	<Button label="Link Exchange" types="ghost" size="md" textColorClass="text-onSurface">
+	<Button label="友情链接" types="ghost" size="md" textColorClass="text-onSurface">
 		<Icon data={link} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
 </div>
 
 <div class="px-6 md:px-12 pt-7 pb-6 flex flex-col gap-7">
 	<slot />
+	<footer>
+		<p class="font-serif text-2xl">ICEKYLIN’S BLOG</p>
+	</footer>
 </div>

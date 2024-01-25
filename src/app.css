@@ -117,6 +117,32 @@
 		--gradient: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
 	}
 
+	/* scrollbar */
+	*:not(body)::-webkit-scrollbar {
+		display: none;
+	}
+
+	*:not(html) {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	::-webkit-scrollbar {
+		@apply w-2;
+	}
+
+	::-webkit-scrollbar-track {
+		@apply bg-surface;
+	}
+
+	::-webkit-scrollbar-thumb {
+		@apply bg-outlineVariant;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		@apply bg-outline;
+	}
+
 	.small-caps {
 		font-variant: small-caps;
 	}
