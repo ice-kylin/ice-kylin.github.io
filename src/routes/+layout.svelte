@@ -4,9 +4,7 @@
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 	import Footer from '$lib/component/Footer.svelte';
 	import Nav from '$lib/component/Nav.svelte';
-	import mousePosition from '$lib/store/mousePosition';
-
-	$: mouseStyle = `top: ${$mousePosition.y - 10}px; left: ${$mousePosition.x - 10}px;`;
+	import Pointer from '$lib/component/Pointer.svelte';
 </script>
 
 <SvelteTheme></SvelteTheme>
@@ -15,7 +13,4 @@
 	<slot />
 	<Footer></Footer>
 </div>
-<div
-	class="w-5 h-5 bg-white rounded-xl fixed mix-blend-exclusion pointer-events-none"
-	style={mouseStyle}
-></div>
+<Pointer></Pointer>

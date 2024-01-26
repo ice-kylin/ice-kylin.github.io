@@ -15,7 +15,9 @@
 	$: inactiveTextColor = $isTop.isTop ? 'text-onSurface' : 'text-white';
 </script>
 
-<div class={`fixed flex gap-2 overflow-scroll mt-6 ${$isTop.isTop ? '' : 'mix-blend-difference'}`}>
+<div
+	class={`fixed top-0 left-0 right-0 flex gap-2 overflow-scroll mt-6 ${$isTop.isTop ? '' : 'mix-blend-difference'}`}
+>
 	<div class="w-4 md:w-10 shrink-0"></div>
 	<Button
 		label="主页"
@@ -38,4 +40,5 @@
 	<Button label="友情链接" types="ghost" size="md" textColorClass={inactiveTextColor}>
 		<Icon data={link} size="18px" stroke="transparent" slot="icon"></Icon>
 	</Button>
+	<div class="w-4 md:w-10 shrink-0"></div>
 </div>

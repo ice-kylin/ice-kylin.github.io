@@ -4,7 +4,8 @@
 	"private": true,
 	"scripts": {
 		"ibp": "pnpm i && pnpm build && pnpm preview",
-		"dev": "vite dev",
+		"bp": "pnpm build && pnpm preview",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview --host",
 		"test": "npm run test:integration && npm run test:unit",

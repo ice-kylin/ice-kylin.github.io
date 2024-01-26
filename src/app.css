@@ -133,6 +133,18 @@
 		font-variant: small-caps;
 	}
 
+	.fs {
+		@apply font-serif;
+		@apply font-bold;
+		@apply sm:font-normal;
+	}
+
+	.fa {
+		@apply font-art;
+		@apply font-bold;
+		@apply sm:font-normal;
+	}
+
 	/* cursor */
 	* {
 		cursor: none !important;

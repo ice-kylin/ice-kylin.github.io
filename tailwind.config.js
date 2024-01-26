@@ -73,11 +73,11 @@ export default {
 			},
 			fontFamily: {
 				sans: [
-					'Inter',
 					'HarmonyOS Sans SC',
 					'PingFang SC',
-					'Helvetica Neue',
 					'Microsoft YaHei',
+					'-apple-system',
+					'BlinkMacSystemFont',
 					'ui-sans-serif',
 					'system-ui',
 					'sans-serif',

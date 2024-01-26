@@ -15,13 +15,15 @@
 		<span class="small-caps text-5xl">IceKylin</span>
 	</div>
 	<div class="pr-6">
-		<p class="font-serif small-caps whitespace-nowrap">Code Changes The World.</p>
+		<p class="fs small-caps whitespace-nowrap">Code Changes The World.</p>
 	</div>
 </div>
 
 <div class="flex flex-col md:flex-row gap-12">
-	<div class="max-w-3xl font-serif md:basis-3/5">
-		<img src={img} alt="icekylin" />
+	<div class="max-w-3xl fs md:basis-3/5">
+		<div class="overflow-hidden">
+			<img class="hover:scale-105 transition-all duration-300" src={img} alt="icekylin" />
+		</div>
 		<p class="mt-2">Birmingham, United Kingdom, 2/1/2024.</p>
 		<p>&copy; icekylin.</p>
 	</div>
@@ -29,11 +31,11 @@
 </div>
 
 <div class="flex flex-col md:flex-row gap-12">
-	<div class="max-w-3xl font-serif md:basis-2/5 md:mt-16">
+	<div class="max-w-3xl fs md:basis-2/5 md:mt-16">
 		<img src={icekylin} alt="icekylin" />
 		<p class="mt-2">&copy; 荻pote.</p>
 	</div>
-	<div class="max-w-3xl font-serif md:basis-3/5 md:mt-64">
+	<div class="max-w-3xl fs md:basis-3/5 md:mt-64">
 		<img src={icekylin2} alt="icekylin" />
 		<p class="mt-2">&copy; 荻pote.</p>
 	</div>

@@ -4,13 +4,13 @@
 </script>
 
 <div>
-	<p class="font-art text-sm small-caps">
+	<p class="fa text-sm small-caps">
 		{title}
 	</p>
 	<div class="flex gap-2 items-center">
 		<div class="w-[18px]">
 			<slot />
 		</div>
-		<span class="font-serif">{content}</span>
+		<span class="fs">{content}</span>
 	</div>
 </div>
