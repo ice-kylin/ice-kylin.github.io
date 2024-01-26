@@ -6,7 +6,8 @@
 	/* theme */
 	:root,
 	html[data-theme='light'] {
-		--md-sys-color-primary: 102 85 142;
+		/*--md-sys-color-primary: 102 85 142;*/
+		--md-sys-color-primary: 80 0 184;
 		--md-sys-color-surface-tint: 102 85 142;
 		--md-sys-color-on-primary: 255 255 255;
 		--md-sys-color-primary-container: 234 221 255;
@@ -127,12 +128,18 @@
 		scrollbar-width: none;
 	}
 
+	/* font */
 	.small-caps {
 		font-variant: small-caps;
 	}
 
-	.superellipse {
-		mask-image: paint(smooth-corners);
-		-webkit-mask-image: paint(smooth-corners);
+	/* cursor */
+	* {
+		cursor: none !important;
+	}
+
+	::selection {
+		@apply bg-primary;
+		@apply text-onPrimary;
 	}
 }
