@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Button } from 'mood-ui';
+	import Button from '$lib/component/Button.svelte';
 	import { Icon } from 'svelte-icon';
 	import SelfIntro from '$lib/component/SelfIntro.svelte';
 	import GraduationCap from '$lib/icon/GraduationCap.svelte';
@@ -8,6 +8,7 @@
 	import ArtistPalette from '$lib/icon/ArtistPalette.svelte';
 	import ClosedMailbox from '$lib/icon/ClosedMailbox.svelte';
 	import arrowRight from '@mdi/svg/svg/arrow-right.svg?raw';
+	import PointerDiv from '$lib/component/PointerDiv.svelte';
 </script>
 
 <div class="md:pt-80 md:basis-2/5">
@@ -31,15 +32,17 @@
 			<ClosedMailbox></ClosedMailbox>
 		</SelfIntro>
 		<div class="mt-6">
-			<Button
-				label="了解更多"
-				types="primary"
-				size="md"
-				backgroundColorClass="bg-surfaceContainer"
-				textColorClass="text-onSurfaceContainer"
-			>
-				<Icon data={arrowRight} size="18px" stroke="transparent" slot="icon"></Icon>
-			</Button>
+			<PointerDiv full radius="rounded-full">
+				<Button
+					label="了解更多"
+					types="primary"
+					size="md"
+					backgroundColorClass="bg-surfaceContainer"
+					textColorClass="text-onSurfaceContainer"
+				>
+					<Icon data={arrowRight} size="18px" stroke="transparent" slot="icon"></Icon>
+				</Button>
+			</PointerDiv>
 		</div>
 	</div>
 </div>

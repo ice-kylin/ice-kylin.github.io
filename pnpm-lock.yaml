@@ -55,9 +55,6 @@ devDependencies:
   eslint-plugin-svelte:
     specifier: ^2.35.1
     version: 2.35.1(eslint@8.56.0)(svelte@4.2.9)
-  mood-ui:
-    specifier: file:../mood-ui
-    version: file:../mood-ui(svelte@4.2.9)
   postcss:
     specifier: ^8.4.33
     version: 8.4.33
@@ -3011,15 +3008,4 @@ packages:
   /yocto-queue@1.0.0:
     resolution: {integrity: sha512-9bnSc/HEW2uRy67wc+T8UwauLuPJVn28jb+GtJY16iiKWyvmYJRXVT4UamsAEGQfPohgr2q4Tq0sQbQlxTfi1g==}
     engines: {node: '>=12.20'}
-    dev: true
-
-  file:../mood-ui(svelte@4.2.9):
-    resolution: {directory: ../mood-ui, type: directory}
-    id: file:../mood-ui
-    name: mood-ui
-    peerDependencies:
-      svelte: ^4.2.8
-    dependencies:
-      '@mdi/svg': 7.4.47
-      svelte: 4.2.9
     dev: true
