@@ -1,6 +1,6 @@
 import { readable } from 'svelte/store';
 
-export default readable({ x: 0, y: 0 }, (set) => {
+export default readable({ x: -50, y: -50 }, (set) => {
 	if (typeof window === 'undefined') return;
 
 	function move(event: { clientX: number; clientY: number }) {

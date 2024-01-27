@@ -13,6 +13,7 @@
 
 <div class="md:pt-80 md:basis-2/5">
 	<div class="flex flex-col gap-4">
+		<span class="font-art text-2xl small-caps">About Me</span>
 		<SelfIntro title="Third Year B.Sc. Computer Science student" content="University of Birmingham">
 			<GraduationCap></GraduationCap>
 		</SelfIntro>
@@ -31,12 +32,11 @@
 		<SelfIntro title="Email" content="qxw092@student.bham.ac.uk">
 			<ClosedMailbox></ClosedMailbox>
 		</SelfIntro>
-		<div class="mt-6">
+		<div class="mt-2">
 			<PointerDiv full radius="rounded-full">
 				<Button
 					label="了解更多"
 					types="primary"
-					size="md"
 					backgroundColorClass="bg-surfaceContainer"
 					textColorClass="text-onSurfaceContainer"
 				>

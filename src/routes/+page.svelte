@@ -22,7 +22,7 @@
 	</div>
 </div>
 
-<div class="flex flex-col md:flex-row gap-12">
+<div class="flex flex-col md:flex-row gap-7 sm:gap-12">
 	<div class="max-w-3xl fs md:basis-3/5">
 		<PointerDiv>
 			<div class="overflow-hidden">
@@ -35,7 +35,7 @@
 	<SelfIntros></SelfIntros>
 </div>
 
-<div class="flex flex-col md:flex-row gap-12">
+<div class="flex flex-col md:flex-row gap-7 sm:gap-12">
 	<div class="max-w-3xl fs md:basis-2/5 md:mt-16">
 		<img src={icekylin} alt="icekylin" />
 		<p class="mt-2">&copy; 荻pote.</p>
