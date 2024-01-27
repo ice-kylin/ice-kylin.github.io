@@ -39,9 +39,9 @@
 	$: style = `${bgColorstyle} ${bgGradientStyle}`;
 </script>
 
-<button class={styleClass} on:click {style} type="button">
+<div class={styleClass} {style}>
 	<slot name="icon" />
 	<div class="pl-2 font-bold">
 		{label}
 	</div>
-</button>
+</div>

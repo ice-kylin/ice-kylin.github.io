@@ -8,6 +8,51 @@
 	import imageFilterHdrOutline from '@mdi/svg/svg/image-filter-hdr-outline.svg?raw';
 	import link from '@mdi/svg/svg/link.svg?raw';
 	import PointerDiv from '$lib/component/PointerDiv.svelte';
+	import { page } from '$app/stores';
+
+	function comparePath(p1: string | null, p2: string) {
+		if (!p1) {
+			return false;
+		}
+
+		if (p1 == p2) {
+			return true;
+		}
+
+		if (p2 == '/') {
+			return false;
+		}
+
+		return p1.startsWith(p2);
+	}
+
+	let items = [
+		{
+			label: '主页',
+			icon: homeRoof,
+			link: '/'
+		},
+		{
+			label: '分类',
+			icon: inboxMultipleOutline,
+			link: '/link'
+		},
+		{
+			label: '时间轴',
+			icon: clockTimeTwelveOutline,
+			link: '/link'
+		},
+		{
+			label: '照片',
+			icon: imageFilterHdrOutline,
+			link: '/link'
+		},
+		{
+			label: '友情链接',
+			icon: link,
+			link: '/link'
+		}
+	];
 
 	$: activeTextColor = $isTop.isTop ? 'text-onSurfaceContainer' : 'text-white';
 	$: activeBackgroundColor = `transition-colors duration-300 ${
@@ -20,27 +65,21 @@
 	class={`fixed top-0 left-0 right-0 flex gap-2 overflow-scroll mt-6 z-10 ${$isTop.isTop ? '' : 'mix-blend-difference'}`}
 >
 	<div class="w-4 md:w-10 shrink-0"></div>
-	<PointerDiv full radius="rounded-full">
-		<Button
-			label="主页"
-			types="ghost"
-			backgroundColorClass={activeBackgroundColor}
-			textColorClass={activeTextColor}
-		>
-			<Icon data={homeRoof} size="18px" stroke="transparent" slot="icon"></Icon>
-		</Button>
-	</PointerDiv>
-	<Button label="分类" types="ghost" textColorClass={inactiveTextColor}>
-		<Icon data={inboxMultipleOutline} size="18px" stroke="transparent" slot="icon"></Icon>
-	</Button>
-	<Button label="时间轴" types="ghost" textColorClass={inactiveTextColor}>
-		<Icon data={clockTimeTwelveOutline} size="18px" stroke="transparent" slot="icon"></Icon>
-	</Button>
-	<Button label="照片" types="ghost" textColorClass={inactiveTextColor}>
-		<Icon data={imageFilterHdrOutline} size="18px" stroke="transparent" slot="icon"></Icon>
-	</Button>
-	<Button label="友情链接" types="ghost" textColorClass={inactiveTextColor}>
-		<Icon data={link} size="18px" stroke="transparent" slot="icon"></Icon>
-	</Button>
+	{#each items as item}
+		<PointerDiv full radius="rounded-full">
+			<a href={item.link}>
+				<Button
+					label={item.label}
+					types="ghost"
+					backgroundColorClass={comparePath($page.route.id, item.link) ? activeBackgroundColor : ''}
+					textColorClass={$page.route.id?.startsWith(item.link)
+						? activeTextColor
+						: inactiveTextColor}
+				>
+					<Icon data={item.icon} size="18px" stroke="transparent" slot="icon"></Icon>
+				</Button>
+			</a>
+		</PointerDiv>
+	{/each}
 	<div class="w-4 md:w-10 shrink-0"></div>
 </div>
