@@ -1,6 +1,11 @@
 <script lang="ts">
-	export let types: 'primary' | 'secondary' | 'tertiary' | 'ghost' | 'danger' | 'gradient' =
-		'primary';
+	export let types:
+		| 'primary'
+		| 'secondary'
+		| 'tertiary'
+		| 'ghost'
+		| 'danger'
+		| 'gradient' = 'primary';
 	export let backgroundColor: string | undefined = undefined;
 	export let backgroundColorClass: string | undefined = undefined;
 	export let textColorClass: string | undefined = undefined;
@@ -35,7 +40,9 @@
 				? `background-image: ${backgroundGradient}`
 				: 'background-image: var(--gradient)'
 			: '';
-	$: bgColorstyle = backgroundColor ? `background-color: ${backgroundColor};` : '';
+	$: bgColorstyle = backgroundColor
+		? `background-color: ${backgroundColor};`
+		: '';
 	$: style = `${bgColorstyle} ${bgGradientStyle}`;
 </script>
 

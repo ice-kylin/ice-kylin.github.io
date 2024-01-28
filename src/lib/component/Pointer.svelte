@@ -10,8 +10,12 @@
 			: 'w-12 h-12 rounded-3xl'
 		: 'w-5 h-5 rounded-[10px]';
 	$: translateClass = overFull ? '' : '-translate-x-1/2 -translate-y-1/2';
-	$: transitionClass = overFull ? 'transition-all' : 'transition-[border-radius,width,height]';
-	$: sizeStyle = overFull ? `width: ${$pointer.w}px; height: ${$pointer.h}px;` : '';
+	$: transitionClass = overFull
+		? 'transition-all'
+		: 'transition-[border-radius,width,height]';
+	$: sizeStyle = overFull
+		? `width: ${$pointer.w}px; height: ${$pointer.h}px;`
+		: '';
 	$: mouseStyle = overFull
 		? `top: ${$pointer.t}px; left: ${$pointer.l}px;`
 		: `top: ${$mousePosition.y}px; left: ${$mousePosition.x}px;`;
