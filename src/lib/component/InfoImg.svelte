@@ -12,10 +12,10 @@
 	<PointerDiv>
 		<div class="overflow-hidden">
 			<img
-				class="hover:scale-105 transition-all duration-300"
-				{src}
 				{alt}
+				class="hover:scale-105 transition-all duration-300"
 				loading="lazy"
+				{src}
 			/>
 		</div>
 	</PointerDiv>

@@ -15,45 +15,45 @@
 	<div class="flex flex-col gap-4">
 		<span class="font-art text-2xl small-caps">About Me</span>
 		<SelfIntro
-			title="Third Year B.Sc. Computer Science student"
 			content="University of Birmingham"
+			title="Third Year B.Sc. Computer Science student"
 		>
 			<GraduationCap></GraduationCap>
 		</SelfIntro>
 		<SelfIntro
-			title="Field of Research"
 			content="Compilers, programming language theory, formal verification, operating systems, etc."
+			title="Field of Research"
 		>
 			<OpenBook></OpenBook>
 		</SelfIntro>
 		<SelfIntro
-			title="Skills"
 			content="Rust, Haskell, TypeScript, Svelte, Figma..."
+			title="Skills"
 		>
 			<Seeding></Seeding>
 		</SelfIntro>
 		<SelfIntro
-			title="Hobbies"
 			content="Playing video games, watching anime..."
+			title="Hobbies"
 		>
 			<ArtistPalette></ArtistPalette>
 		</SelfIntro>
-		<SelfIntro title="Email" content="qxw092@student.bham.ac.uk">
+		<SelfIntro content="qxw092@student.bham.ac.uk" title="Email">
 			<ClosedMailbox></ClosedMailbox>
 		</SelfIntro>
 		<div class="mt-2">
 			<PointerDiv full radius="rounded-full">
 				<Button
-					label="了解更多"
-					types="primary"
 					backgroundColorClass="bg-surfaceContainer"
+					label="了解更多"
 					textColorClass="text-onSurfaceContainer"
+					types="primary"
 				>
 					<Icon
 						data={arrowRight}
 						size="18px"
-						stroke="transparent"
 						slot="icon"
+						stroke="transparent"
 					></Icon>
 				</Button>
 			</PointerDiv>

@@ -4,9 +4,9 @@
 </script>
 
 <Header
-	title="Tags"
-	subtitle="All the"
 	label="Please don't arbitrarily label people."
+	subtitle="All the"
+	title="Tags"
 >
 	<Label></Label>
 </Header>

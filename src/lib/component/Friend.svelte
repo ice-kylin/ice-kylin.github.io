@@ -13,26 +13,30 @@
 
 <div class="flex gap-8">
 	<PointerDiv>
-		<a href={link} target="_blank" rel="noopener noreferrer">
+		<a href={link} rel="noopener noreferrer" target="_blank">
 			<img
-				src={kevin}
 				alt={name}
-				loading="lazy"
 				class="w-10 h-10 rounded-full"
+				loading="lazy"
+				src={kevin}
 			/>
 		</a>
 	</PointerDiv>
 	<div class="flex flex-col gap-1">
-		<p class="font-bold">{name}</p>
+		<PointerDiv>
+			<a href={link} rel="noopener noreferrer" target="_blank">
+				<p class="font-bold">{name}</p>
+			</a>
+		</PointerDiv>
 		<p class="text-onSurfaceVariant text-sm">{description}</p>
 		<div class="flex gap-2">
 			<PointerDiv>
-				<a href={link} target="_blank" rel="noopener noreferrer">
+				<a href={link} rel="noopener noreferrer" target="_blank">
 					<Icon
 						data={earth}
 						size="18px"
-						stroke="transparent"
 						slot="icon"
+						stroke="transparent"
 					></Icon>
 				</a>
 			</PointerDiv>

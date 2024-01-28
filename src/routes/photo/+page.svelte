@@ -4,9 +4,9 @@
 </script>
 
 <Header
-	title="Photos"
-	subtitle="Aha..."
 	label="I'm not a professional photographer."
+	subtitle="Aha..."
+	title="Photos"
 >
 	<Camera></Camera>
 </Header>

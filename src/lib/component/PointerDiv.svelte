@@ -41,13 +41,13 @@
 </script>
 
 <div
-	role="presentation"
-	bind:this={element}
-	bind:clientWidth={w}
 	bind:clientHeight={h}
+	bind:clientWidth={w}
+	bind:this={element}
+	class="w-fit"
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
-	class="w-fit"
+	role="presentation"
 >
 	<slot />
 </div>

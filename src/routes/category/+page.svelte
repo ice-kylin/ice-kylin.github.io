@@ -3,6 +3,6 @@
 	import Header from '$lib/component/Header.svelte';
 </script>
 
-<Header title="Categories" subtitle="This is" label="I like to be tidy.">
+<Header label="I like to be tidy." subtitle="This is" title="Categories">
 	<Books></Books>
 </Header>
