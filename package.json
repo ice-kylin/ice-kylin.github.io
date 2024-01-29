@@ -1,9 +1,11 @@
 {
 	"devDependencies": {
+		"@fontsource-variable/hanken-grotesk": "^5.0.19",
 		"@mdi/svg": "^7.4.47",
 		"@playwright/test": "^1.41.1",
 		"@sveltejs/adapter-auto": "^3.1.1",
 		"@sveltejs/adapter-static": "^3.0.1",
+		"@sveltejs/enhanced-img": "^0.1.8",
 		"@sveltejs/kit": "^2.5.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.1",
 		"@types/eslint": "8.56.0",

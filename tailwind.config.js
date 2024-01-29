@@ -140,7 +140,11 @@ export default {
 					...defaultTheme.fontFamily.sans
 				],
 				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
-				art: ['KpSans', ...defaultTheme.fontFamily.sans]
+				art: ['KpSans', ...defaultTheme.fontFamily.sans],
+				art2: [
+					'Hanken Grotesk Variable',
+					...defaultTheme.fontFamily.sans
+				]
 			}
 		}
 	},

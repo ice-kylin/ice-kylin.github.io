@@ -75,9 +75,7 @@
 	$: activeTextColor = $isTop.isTop
 		? 'text-onSurfaceContainer'
 		: 'text-white';
-	$: activeBackgroundColor = `transition-colors duration-300 ${
-		$isTop.isTop ? 'bg-surfaceContainer' : ''
-	}`;
+	$: activeBackgroundColor = $isTop.isTop ? 'bg-surfaceContainer' : '';
 	$: inactiveTextColor = $isTop.isTop ? 'text-onSurface' : 'text-white';
 </script>
 

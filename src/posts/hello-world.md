@@ -1,5 +1,5 @@
 ---
-title: Hello World
+title: 你好，世界 🌍
 description: 这是我的第一篇博文
 date: '2023-01-27'
 categories:
@@ -23,3 +23,9 @@ fn greet(name: &str) {
     println!("Hey, {}!", name);
 }
 ```
+
+## Svelte
+
+Media inside the **static** folder is served from `/`.
+
+![Svelte](svelte.png)
