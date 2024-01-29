@@ -23,7 +23,7 @@
 
 {#if !$isMob.isMob}
 	<div
-		class={`${sizeClass} ${translateClass} ${transitionClass} z-50 duration-300 bg-white fixed mix-blend-exclusion pointer-events-none`}
+		class={`${sizeClass} ${translateClass} ${transitionClass} pointer-events-none fixed z-50 bg-white mix-blend-exclusion duration-300`}
 		style={`${mouseStyle} ${sizeStyle}`}
 	/>
 {/if}

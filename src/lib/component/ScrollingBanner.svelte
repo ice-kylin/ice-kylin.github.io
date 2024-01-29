@@ -3,7 +3,7 @@
 </script>
 
 <div
-	class="border-t-2 border-b-2 border-onBackground py-5 text-xl font-art2 tracking-wider overflow-hidden"
+	class="overflow-hidden border-b border-t border-onBackground py-5 font-art2 text-xl tracking-wider"
 >
 	<div class="content whitespace-nowrap">
 		<p>{text}</p>

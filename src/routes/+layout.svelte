@@ -14,7 +14,7 @@
 
 <SvelteTheme></SvelteTheme>
 <Header></Header>
-<main class="px-6 md:px-12 pt-28 flex flex-col gap-7 sm:gap-12">
+<main class="flex flex-col gap-8 px-6 pt-28 sm:gap-12 md:px-12">
 	<slot />
 </main>
 <Footer></Footer>

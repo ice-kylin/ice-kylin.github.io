@@ -1,7 +1,8 @@
 ---
 title: 你好，世界 🌍
 description: 这是我的第一篇博文
-date: '2023-01-27'
+date: '2024-01-27'
+img: '/images/hello-world/hello-world.jpg'
 categories:
     - Study
 tags:

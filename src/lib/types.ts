@@ -5,7 +5,7 @@ export type Post = {
 	slug: string[];
 	description: string;
 	date: string;
-	img?: string;
+	img: string;
 	modified?: string;
 	categories: Categories[];
 	tags: string[];

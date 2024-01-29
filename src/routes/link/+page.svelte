@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Party from '$lib/icon/Party.svelte';
 	import Header from '$lib/component/Header.svelte';
-	import img from '../../assets/images/3.webp';
-	import img2 from '../../assets/photos/IMG_20230118_084459.webp';
+	import img from '../../assets/images/3.webp?enhanced';
+	import img2 from '../../assets/photos/IMG_20230118_084459.webp?enhanced';
 	import InfoImg from '$lib/component/InfoImg.svelte';
 	import Friend from '$lib/component/Friend.svelte';
 </script>
@@ -11,19 +11,19 @@
 	<Party></Party>
 </Header>
 
-<div class="flex flex-col md:flex-row gap-7 sm:gap-12">
-	<InfoImg
-		alt="荻pote"
-		clz="md:basis-2/5"
-		description=""
-		src={img}
-		title="&copy; 荻pote."
-	></InfoImg>
-	<div class="md:pt-64 md:basis-3/5">
+<div class="flex flex-col gap-7 sm:gap-12 md:flex-row">
+	<InfoImg clz="md:basis-2/5" description="" title="&copy; 荻pote.">
+		<enhanced:img
+			src={img}
+			alt="荻pote"
+			class="transition-all duration-300 hover:scale-105"
+		/>
+	</InfoImg>
+	<div class="md:basis-3/5 md:pt-64">
 		<div class="flex flex-col gap-7">
-			<span class="font-art text-2xl small-caps">Global</span>
+			<span class="small-caps font-art text-2xl">Global</span>
 			<div
-				class="grid gap-x-6 gap-y-7 grid-cols-[repeat(auto-fill,minmax(256px,1fr))]"
+				class="grid grid-cols-[repeat(auto-fill,minmax(256px,1fr))] gap-x-6 gap-y-7"
 			>
 				<Friend
 					description="我的伯明翰大学同学"
@@ -36,20 +36,24 @@
 	</div>
 </div>
 
-<div class="flex flex-col md:flex-row gap-7 sm:gap-12">
-	<div class="md:pt-16 md:basis-2/5">
+<div class="flex flex-col gap-7 sm:gap-12 md:flex-row">
+	<div class="md:basis-2/5 md:pt-16">
 		<div class="flex flex-col gap-7">
-			<span class="font-art text-2xl small-caps">China</span>
+			<span class="small-caps font-art text-2xl">China</span>
 			<div
-				class="grid gap-x-6 gap-y-7 grid-cols-[repeat(auto-fill,minmax(200px,1fr))]"
+				class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-x-6 gap-y-7"
 			></div>
 		</div>
 	</div>
 	<InfoImg
-		alt="icekylin"
-		clz="md:pt-32 md:basis-3/5"
+		clz="md:basis-3/5"
 		description="&copy; icekylin."
-		src={img2}
-		title="Birmingham, United Kingdom, 18/1/2023."
-	></InfoImg>
+		title="Birmingham, United Kingdom, 2/1/2024."
+	>
+		<enhanced:img
+			src={img2}
+			alt="icekylin"
+			class="transition-all duration-300 hover:scale-105"
+		/>
+	</InfoImg>
 </div>

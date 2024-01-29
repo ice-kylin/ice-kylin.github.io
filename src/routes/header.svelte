@@ -80,10 +80,10 @@
 </script>
 
 <header
-	class={`fixed top-0 left-0 right-0 mt-6 z-10 ${$isTop.isTop ? '' : 'mix-blend-difference'}`}
+	class={`fixed left-0 right-0 top-0 z-10 mt-6 ${$isTop.isTop ? '' : 'mix-blend-difference'}`}
 >
-	<nav class="max-w-screen-2xl mx-auto flex gap-2 overflow-scroll">
-		<div class="w-4 md:w-10 shrink-0"></div>
+	<nav class="mx-auto flex max-w-screen-2xl gap-2 overflow-scroll">
+		<div class="w-4 shrink-0 md:w-10"></div>
 		{#each items as item}
 			<PointerDiv full radius="rounded-full">
 				<a href={item.link}>
@@ -110,6 +110,6 @@
 				</a>
 			</PointerDiv>
 		{/each}
-		<div class="w-4 md:w-10 shrink-0"></div>
+		<div class="w-4 shrink-0 md:w-10"></div>
 	</nav>
 </header>

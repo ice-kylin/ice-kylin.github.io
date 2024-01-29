@@ -4,10 +4,10 @@
 </script>
 
 <div>
-	<p class="fa text-sm small-caps">
+	<p class="fa small-caps text-sm">
 		{title}
 	</p>
-	<div class="flex gap-2 items-center">
+	<div class="flex items-center gap-2">
 		<div class="w-[18px]">
 			<slot />
 		</div>

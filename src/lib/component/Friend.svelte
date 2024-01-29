@@ -16,7 +16,7 @@
 		<a href={link} rel="noopener noreferrer" target="_blank">
 			<img
 				alt={name}
-				class="w-10 h-10 rounded-full"
+				class="h-10 w-10 rounded-full"
 				loading="lazy"
 				src={kevin}
 			/>
@@ -28,7 +28,7 @@
 				<p class="font-bold">{name}</p>
 			</a>
 		</PointerDiv>
-		<p class="text-onSurfaceVariant text-sm">{description}</p>
+		<p class="text-sm text-onSurfaceVariant">{description}</p>
 		<div class="flex gap-2">
 			<PointerDiv>
 				<a href={link} rel="noopener noreferrer" target="_blank">

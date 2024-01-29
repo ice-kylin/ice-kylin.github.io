@@ -11,9 +11,9 @@
 	import PointerDiv from '$lib/component/PointerDiv.svelte';
 </script>
 
-<div class="md:pt-80 md:basis-2/5">
+<div class="md:basis-2/5 md:pt-80">
 	<div class="flex flex-col gap-4">
-		<span class="font-art text-2xl small-caps">About Me</span>
+		<span class="small-caps font-art text-2xl">About Me</span>
 		<SelfIntro
 			content="University of Birmingham"
 			title="Third Year B.Sc. Computer Science student"
@@ -43,19 +43,21 @@
 		</SelfIntro>
 		<div class="mt-2">
 			<PointerDiv full radius="rounded-full">
-				<Button
-					backgroundColorClass="bg-surfaceContainer"
-					label="了解更多"
-					textColorClass="text-onSurfaceContainer"
-					types="primary"
-				>
-					<Icon
-						data={arrowRight}
-						size="18px"
-						slot="icon"
-						stroke="transparent"
-					></Icon>
-				</Button>
+				<a href="/about">
+					<Button
+						backgroundColorClass="bg-surfaceContainer"
+						label="了解更多"
+						textColorClass="text-onSurfaceContainer"
+						types="primary"
+					>
+						<Icon
+							data={arrowRight}
+							size="18px"
+							slot="icon"
+							stroke="transparent"
+						></Icon>
+					</Button>
+				</a>
 			</PointerDiv>
 		</div>
 	</div>

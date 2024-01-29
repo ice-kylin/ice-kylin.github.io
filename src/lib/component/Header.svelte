@@ -7,7 +7,7 @@
 </script>
 
 <div
-	class="flex flex-col md:flex-row md:justify-between md:items-center font-art md:flex-wrap gap-2"
+	class="flex flex-col gap-2 font-art md:flex-row md:flex-wrap md:items-center md:justify-between"
 >
 	<div class="flex flex-col gap-4">
 		<div class="flex items-center gap-2">
