@@ -1,4 +1,6 @@
 <script lang="ts">
+	import PointerDiv from '$lib/component/PointerDiv.svelte';
+
 	export let title: string;
 	export let description: string;
 	export let date: string;
@@ -9,23 +11,33 @@
 	$: directionOuterClass = left ? 'flex-row-reverse text-right' : '';
 </script>
 
-<div
-	class={`flex justify-between gap-8 md:flex-row md:text-left ${directionOuterClass} ${clz}`}
->
-	<div class="flex flex-col justify-center gap-2">
-		<p
-			class="line-clamp-2 font-bold text-onSurfaceVariant underline decoration-primary md:text-xl"
-		>
-			{title}
-		</p>
-		<p class="line-clamp-3 text-sm md:text-base">{description}</p>
-		<p class="font-mono text-xs text-onSurfaceVariant md:text-sm">{date}</p>
+<PointerDiv>
+	<div
+		class={`parent flex justify-between gap-8 md:flex-row md:text-left ${directionOuterClass} ${clz}`}
+	>
+		<div class="flex flex-col justify-center gap-2">
+			<p
+				class="line-clamp-2 font-bold text-onSurfaceVariant underline decoration-primary md:text-xl"
+			>
+				{title}
+			</p>
+			<p class="line-clamp-3 text-sm md:text-base">{description}</p>
+			<p class="font-mono text-xs text-onSurfaceVariant md:text-sm">
+				{date}
+			</p>
+		</div>
+		<img
+			alt={title}
+			class="child h-32 w-32 shrink-0 rounded-full object-cover transition-all duration-1000 md:h-48 md:w-48 md:rounded-none"
+			decoding="async"
+			loading="lazy"
+			src={img}
+		/>
 	</div>
-	<img
-		src={img}
-		alt={title}
-		loading="lazy"
-		decoding="async"
-		class="h-32 w-32 shrink-0 rounded-full object-cover md:h-48 md:w-48 md:rounded-none"
-	/>
-</div>
+</PointerDiv>
+
+<style>
+	.parent:hover > .child {
+		@apply rounded-full;
+	}
+</style>

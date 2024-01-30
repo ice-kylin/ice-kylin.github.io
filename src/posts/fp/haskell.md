@@ -458,28 +458,29 @@ init' (x : xs) = x : init' xs
 
 -   可以使用以下简单的递归形式定义和列表相关的许多函数
     -   ```
-        f [] = v
-        f (x : xs) = x ⊕ f xs
+          f [] = v
+          f (x : xs) = x ⊕ f xs
         ```
     -   ```haskell
-        sum [] = 0
-        sum (x : xs) = x + sum xs
+          sum [] = 0
+          sum (x : xs) = x + sum xs
         ```
 -   高阶库函数 `foldr`（右折叠）封装了这种简单的递归模式，其使用一个函数 `f` 和值 `v` 作为参数
     -   ```haskell
-        foldr :: (a -> b -> b) -> b -> [a] -> b
-        foldr _ v [] = v
-        foldr f v (x : xs) = f x (foldr f v xs)
+          foldr :: (a -> b -> b) -> b -> [a] -> b
+          foldr _ v [] = v
+          foldr f v (x : xs) = f x (foldr f v xs)
         ```
     -   ```
-          product [1, 2, 3]
-        = foldr (*) 1 [1, 2, 3]
-        = foldr (*) 1 (1 : (2 : (3 : [])))
-        = 1 * (2 * (3 * 1))
-        = 6
+            product [1, 2, 3]
+          = foldr (*) 1 [1, 2, 3]
+          = foldr (*) 1 (1 : (2 : (3 : [])))
+          = 1 * (2 * (3 * 1))
+          = 6
         ```
 -   和列表相关的一些递归函数，例如 `sum`，使用 `foldr` 定义起来更简单
--   使用 `foldr` 定义的函数的属性可以使用 `foldr` 的代数属性来证明，例如 **fusion** 和 **banana split** 规则
+-   使用 `foldr` 定义的函数的属性可以使用 `foldr` 的代数属性来证明，例如 **fusion** 和 **banana split**
+    规则
 -   如果使用 `foldr` 代替显式递归，高级程序**优化**会更简单
 
 ### 其它库函数

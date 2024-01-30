@@ -41,7 +41,7 @@
 		<SelfIntro content="qxw092@student.bham.ac.uk" title="Email">
 			<ClosedMailbox></ClosedMailbox>
 		</SelfIntro>
-		<div class="mt-2">
+		<div class="mt-2 w-fit">
 			<PointerDiv full radius="rounded-full">
 				<a href="/about">
 					<Button

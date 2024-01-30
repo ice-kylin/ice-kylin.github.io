@@ -44,7 +44,6 @@
 	bind:clientHeight={h}
 	bind:clientWidth={w}
 	bind:this={element}
-	class="w-fit"
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
 	role="presentation"
