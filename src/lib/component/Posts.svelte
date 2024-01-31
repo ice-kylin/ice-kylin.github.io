@@ -5,6 +5,7 @@
 	export let description: string;
 	export let date: string;
 	export let img: string;
+	export let link: string;
 	export let clz: string = '';
 	export let left: boolean = false;
 
@@ -12,28 +13,30 @@
 </script>
 
 <PointerDiv>
-	<div
-		class={`parent flex justify-between gap-8 md:flex-row md:text-left ${directionOuterClass} ${clz}`}
-	>
-		<div class="flex flex-col justify-center gap-2">
-			<p
-				class="line-clamp-2 font-bold text-onSurfaceVariant underline decoration-primary md:text-xl"
-			>
-				{title}
-			</p>
-			<p class="line-clamp-3 text-sm md:text-base">{description}</p>
-			<p class="font-mono text-xs text-onSurfaceVariant md:text-sm">
-				{date}
-			</p>
+	<a href={link}>
+		<div
+			class={`parent flex justify-between gap-8 md:flex-row md:text-left ${directionOuterClass} ${clz}`}
+		>
+			<div class="flex flex-col justify-center gap-2">
+				<p
+					class="line-clamp-2 font-bold text-onSurfaceVariant underline decoration-primary md:text-xl"
+				>
+					{title}
+				</p>
+				<p class="line-clamp-3 text-sm md:text-base">{description}</p>
+				<p class="font-mono text-xs text-onSurfaceVariant md:text-sm">
+					{date}
+				</p>
+			</div>
+			<img
+				alt={title}
+				class="child h-32 w-32 shrink-0 rounded-full object-cover transition-all duration-1000 md:h-48 md:w-48 md:rounded-none"
+				decoding="async"
+				loading="lazy"
+				src={img}
+			/>
 		</div>
-		<img
-			alt={title}
-			class="child h-32 w-32 shrink-0 rounded-full object-cover transition-all duration-1000 md:h-48 md:w-48 md:rounded-none"
-			decoding="async"
-			loading="lazy"
-			src={img}
-		/>
-	</div>
+	</a>
 </PointerDiv>
 
 <style>

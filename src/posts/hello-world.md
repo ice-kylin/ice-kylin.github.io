@@ -1,10 +1,11 @@
 ---
-title: 你好，世界 🌍
+title: 你好，世界
 description: 这是我的第一篇博文
 date: '2024-01-27'
-img: '/images/hello-world/hello-world.jpg'
+img: '/images/default.jpg'
 categories:
-    - Study
+	- life
+    - other
 tags:
     - Svelte
     - SvelteKit
@@ -28,5 +29,3 @@ fn greet(name: &str) {
 ## Svelte
 
 Media inside the **static** folder is served from `/`.
-
-![Svelte](svelte.png)

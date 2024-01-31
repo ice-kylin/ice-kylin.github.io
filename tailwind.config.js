@@ -1,5 +1,21 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
+let sans = [
+	'HarmonyOS Sans SC',
+	'PingFang SC',
+	'Microsoft YaHei',
+	'-apple-system',
+	'BlinkMacSystemFont',
+	'ui-sans-serif',
+	'system-ui',
+	'sans-serif',
+	'Apple Color Emoji',
+	'Segoe UI Emoji',
+	'Segoe UI Symbol',
+	'Noto Color Emoji',
+	...defaultTheme.fontFamily.sans
+];
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	content: [
@@ -124,29 +140,58 @@ export default {
 				wb: 'rgb(var(--wb) / <alpha-value>)'
 			},
 			fontFamily: {
-				sans: [
-					'HarmonyOS Sans SC',
-					'PingFang SC',
-					'Microsoft YaHei',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'ui-sans-serif',
-					'system-ui',
-					'sans-serif',
-					'Apple Color Emoji',
-					'Segoe UI Emoji',
-					'Segoe UI Symbol',
-					'Noto Color Emoji',
-					...defaultTheme.fontFamily.sans
-				],
+				sans,
 				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
 				art: ['KpSans', ...defaultTheme.fontFamily.sans],
 				art2: [
 					'Hanken Grotesk Variable',
 					...defaultTheme.fontFamily.sans
 				]
+			},
+			typography: {
+				m3: {
+					css: [
+						{
+							fontFamily: sans.join(', ')
+						},
+						{
+							'--tw-prose-body':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-headings':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-lead':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-links':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-bold':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-counters':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-bullets':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-hr':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-quotes':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-quote-borders':
+								'rgb(var(--md-sys-color-primary) / 1)',
+							'--tw-prose-captions':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-code':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-pre-code':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-pre-bg':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-th-borders':
+								'rgb(var(--md-sys-color-on-surface) / 1)',
+							'--tw-prose-td-borders':
+								'rgb(var(--md-sys-color-on-surface) / 1)'
+						}
+					]
+				}
 			}
 		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };

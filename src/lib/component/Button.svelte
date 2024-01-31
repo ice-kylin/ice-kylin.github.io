@@ -6,10 +6,8 @@
 		| 'ghost'
 		| 'danger'
 		| 'gradient' = 'primary';
-	export let backgroundColor: string | undefined = undefined;
 	export let backgroundColorClass: string | undefined = undefined;
 	export let textColorClass: string | undefined = undefined;
-	export let backgroundGradient: string | undefined = undefined;
 	export let label: string = '';
 
 	$: bgColorClass = backgroundColorClass
@@ -34,19 +32,9 @@
 			}[types];
 	$: styleClass = `flex w-max items-center tracking-[.1px] whitespace-nowrap ${bgColorClass} ${textColorClass} rounded-full pl-4 pr-5 py-2.5 text-sm`;
 
-	$: bgGradientStyle =
-		types == 'gradient'
-			? backgroundGradient
-				? `background-image: ${backgroundGradient}`
-				: 'background-image: var(--gradient)'
-			: '';
-	$: bgColorstyle = backgroundColor
-		? `background-color: ${backgroundColor};`
-		: '';
-	$: style = `${bgColorstyle} ${bgGradientStyle}`;
 </script>
 
-<div class={styleClass} {style}>
+<div class={styleClass}>
 	<slot name="icon" />
 	<div class="pl-2 font-bold">
 		{label}

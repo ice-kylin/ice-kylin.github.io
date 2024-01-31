@@ -11,7 +11,7 @@
 	export let data;
 </script>
 
-<enhanced:img alt="icekylin" class="pt-12 sm:hidden" src={img} />
+<enhanced:img alt="icekylin" class="sm:hidden" src={img} />
 <Main>
 	<div class="hidden sm:block">
 		<Title />
@@ -41,6 +41,7 @@
 				img={post.img}
 				description={post.description}
 				date={formatDate(post.date)}
+				link={post.slug}
 				left={i % 2 === 0}
 			/>
 		{/each}

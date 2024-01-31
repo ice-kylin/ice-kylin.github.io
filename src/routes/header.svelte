@@ -1,5 +1,4 @@
 <script lang="ts">
-	import * as config from '$lib/config';
 	import isTop from '$lib/store/isTop';
 	import Button from '$lib/component/Button.svelte';
 	import { Icon } from 'svelte-icon';
@@ -74,17 +73,19 @@
 	];
 
 	$: activeTextColor = $isTop.isTop
-		? 'text-onSurfaceContainer'
+		? 'text-white sm:text-onSurfaceContainer'
 		: 'text-white';
-	$: activeBackgroundColor = $isTop.isTop ? 'bg-surfaceContainer' : '';
-	$: inactiveTextColor = $isTop.isTop ? 'text-onSurface' : 'text-white';
+	$: activeBackgroundColor = $isTop.isTop ? 'sm:bg-surfaceContainer' : '';
+	$: inactiveTextColor = $isTop.isTop
+		? 'text-white sm:text-onSurface'
+		: 'text-white';
 </script>
 
 <header
-	class={`fixed left-0 right-0 top-0 z-10 hidden sm:mt-6 sm:block ${$isTop.isTop ? '' : 'mix-blend-difference'}`}
+	class={`fixed left-0 right-0 top-0 z-10 mt-6 mix-blend-normal sm:mix-blend-difference ${$isTop.isTop ? 'sm:mix-blend-normal' : ''}`}
 >
 	<nav class="mx-auto flex max-w-screen-2xl gap-2 overflow-scroll">
-		<div class="w-4 shrink-0 md:w-10"></div>
+		<div class="w-0 shrink-0 sm:w-4 md:w-10"></div>
 		{#each items as item}
 			<PointerDiv full radius="rounded-full">
 				<a href={item.link}>
@@ -114,11 +115,3 @@
 		<div class="w-4 shrink-0 md:w-10"></div>
 	</nav>
 </header>
-
-<div
-	class="fixed left-0 right-0 top-0 z-10 flex h-12 items-center justify-between bg-surface/75 pl-6 backdrop-blur sm:hidden"
->
-	<span class="fs translate-y-0.5 text-xl">
-		{config.title}
-	</span>
-</div>

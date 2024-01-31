@@ -1,10 +1,22 @@
 import adapter from '@sveltejs/adapter-static';
-import { mdsvex } from 'mdsvex';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { escapeSvelte, mdsvex } from 'mdsvex';
+import { codeToHtml } from 'shiki';
 
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
-	extensions: ['.md']
+	extensions: ['.md'],
+	highlight: {
+		highlighter: async (code, lang = 'text') => {
+			const html = escapeSvelte(
+				await codeToHtml(code, {
+					lang,
+					theme: 'vitesse-dark'
+				})
+			);
+			return `{@html \`${html}\` }`;
+		}
+	}
 };
 
 /** @type {import('@sveltejs/kit').Config} */

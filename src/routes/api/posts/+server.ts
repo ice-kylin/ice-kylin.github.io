@@ -6,10 +6,16 @@ async function getPosts() {
 		import.meta.glob('/src/posts/**/*.md', { eager: true })
 	)
 		.map(([path, file]) => {
-			if (file && typeof file === 'object' && 'metadata' in file) {
+			const slug = path.split('/').at(-1)?.replace('.md', '');
+			if (
+				file &&
+				typeof file === 'object' &&
+				'metadata' in file &&
+				slug
+			) {
 				return {
 					...(file.metadata as Omit<Post, 'slug'>),
-					slug: path.replace('.md', '').split('/').slice(3)
+					slug
 				} as Post;
 			}
 		})
