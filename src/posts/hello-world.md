@@ -5,10 +5,10 @@ date: '2024-01-27'
 img: '/images/default.jpg'
 categories:
 	- life
-    - other
+	- other
 tags:
-    - Svelte
-    - SvelteKit
+	- Svelte
+	- SvelteKit
 published: true
 ---
 

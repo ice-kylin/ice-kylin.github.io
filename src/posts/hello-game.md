@@ -5,8 +5,8 @@ date: '2024-01-28'
 img: '/images/default.jpg'
 categories:
 	- life
-    - game
+	- game
 tags:
-    - test
+	- test
 published: true
 ---

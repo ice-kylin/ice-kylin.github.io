@@ -1,3 +1,5 @@
+// import type { Post, Tag } from '$lib/types';
+
 type DateStyle = Intl.DateTimeFormatOptions['dateStyle'];
 
 export function formatDate(
@@ -9,3 +11,5 @@ export function formatDate(
 		new Date(date.replaceAll('-', '/'))
 	);
 }
+
+// export function getTags(posts: Post[]): Tag {}

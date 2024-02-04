@@ -48,6 +48,8 @@ export default {
 				]
 			},
 			colors: {
+				main: 'rgb(var(--main) / <alpha-value>)',
+				current: 'rgb(var(--current) / <alpha-value>)',
 				primary: 'rgb(var(--md-sys-color-primary) / <alpha-value>)',
 				onPrimary:
 					'rgb(var(--md-sys-color-on-primary) / <alpha-value>)',
@@ -143,10 +145,7 @@ export default {
 				sans,
 				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
 				art: ['KpSans', ...defaultTheme.fontFamily.sans],
-				art2: [
-					'Hanken Grotesk Variable',
-					...defaultTheme.fontFamily.sans
-				]
+				num: ['Magra', ...defaultTheme.fontFamily.sans]
 			},
 			typography: {
 				m3: {

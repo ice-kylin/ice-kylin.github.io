@@ -9,3 +9,15 @@ export type Post = {
 	tags: string[];
 	published: boolean;
 };
+
+export type Category = {
+	name: string;
+	total: number;
+	items: Post[] | Category[];
+};
+
+export type Tag = {
+	name: string;
+	total: number;
+	items: Post[];
+};
