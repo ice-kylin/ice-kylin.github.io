@@ -71,12 +71,18 @@
 					)}
 				>
 					<div class="hidden w-max md:block">
-						<Icon data={link.icon} size="18px" stroke="transparent"
-						></Icon>
+						<Icon
+							data={link.icon}
+							size="18px"
+							stroke="transparent"
+						/>
 					</div>
 					<div class="w-max md:hidden">
-						<Icon data={link.icon} size="24px" stroke="transparent"
-						></Icon>
+						<Icon
+							data={link.icon}
+							size="24px"
+							stroke="transparent"
+						/>
 					</div>
 					<span class="w-max whitespace-nowrap font-bold"
 						>{link.text}</span

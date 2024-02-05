@@ -4,7 +4,7 @@
 	import { isClose } from '$lib/store/header';
 	import * as config from '$lib/config';
 	import iceCream from '@mdi/svg/svg/ice-cream.svg?raw';
-	import MobileHeaderButton from '$lib/component/MobileHeaderButton.svelte';
+	import MobileHeaderButton from '$lib/header/MobileHeaderButton.svelte';
 	import clsx from 'clsx';
 </script>
 

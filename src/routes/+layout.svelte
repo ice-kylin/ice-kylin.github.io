@@ -9,7 +9,7 @@
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 	import Pointer from '$lib/component/Pointer.svelte';
 	import Header from '$lib/header.svelte';
-	import MobileHeader from '$lib/component/MobileHeader.svelte';
+	import MobileHeader from '$lib/header/MobileHeader.svelte';
 
 	type MaskProps = VariantProps<typeof mask>;
 	type Dir = MaskProps['dir'];
@@ -33,7 +33,7 @@
 	$: style = $isMainColor ? '' : `--current: ${$color};`;
 </script>
 
-<div {style}>
+<div {style} class="px-1.5 md:pl-[220px] md:pr-3">
 	{#each dirs as dir}
 		<div
 			class={mask({ dir, color: $isMainColor ? 'main' : 'current' })}

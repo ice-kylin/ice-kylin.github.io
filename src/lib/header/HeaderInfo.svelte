@@ -2,9 +2,9 @@
 	import { isMainColor } from '$lib/store/color';
 	import { isClose } from '$lib/store/header';
 	import * as config from '$lib/config';
-	import LangButton from '$lib/component/LangButton.svelte';
-	import DarkModeButton from '$lib/component/DarkModeButton.svelte';
-	import RSSLink from '$lib/component/RSSLink.svelte';
+	import LangButton from '$lib/header/LangButton.svelte';
+	import DarkModeButton from '$lib/header/DarkModeButton.svelte';
+	import RSSLink from '$lib/header/RSSLink.svelte';
 	import clsx from 'clsx';
 </script>
 

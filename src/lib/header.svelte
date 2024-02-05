@@ -2,7 +2,7 @@
 	import { isMainColor } from '$lib/store/color';
 	import { isClose } from '$lib/store/header';
 	import Nav from './nav.svelte';
-	import HeaderInfo from '$lib/component/HeaderInfo.svelte';
+	import HeaderInfo from '$lib/header/HeaderInfo.svelte';
 	import clsx from 'clsx';
 </script>
 
