@@ -5,7 +5,7 @@ export type Post = {
 	date: string;
 	img?: string;
 	modified?: string;
-	categories: string[];
+	categories?: string[];
 	tags?: string[];
 	published: boolean;
 };

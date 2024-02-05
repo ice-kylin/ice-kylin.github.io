@@ -1,8 +1,8 @@
 <script lang="ts">
 </script>
 
-<section>
+<section class="mt-6">
 	<ul>
-		<slot></slot>
+		<slot />
 	</ul>
 </section>

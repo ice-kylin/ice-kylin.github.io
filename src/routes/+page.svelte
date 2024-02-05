@@ -4,6 +4,8 @@
 	import Cover from '$lib/cover.svelte';
 	import Main from '$lib/main.svelte';
 	import Footer from '$lib/footer.svelte';
+	import Post from '$lib/main/Post.svelte';
+	import { onDestroy } from 'svelte';
 
 	export let data;
 
@@ -19,6 +21,10 @@
 	if (config.color != undefined) {
 		isMainColor.set(false);
 	}
+
+	onDestroy(() => {
+		isMainColor.set(true);
+	});
 </script>
 
 <div
@@ -31,7 +37,9 @@
 		class="grid min-h-screen grid-rows-[1fr_auto] pb-1.5 md:snap-start md:pb-3 md:pt-3"
 	>
 		<Main>
-			{data.posts.length}
+			{#each data.posts as post}
+				<Post {post}></Post>
+			{/each}
 		</Main>
 		<Footer />
 	</div>

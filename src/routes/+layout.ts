@@ -1,5 +1,3 @@
-export const prerender = true;
-
 import type { Post } from '$lib/types';
 
 export async function load({ fetch }) {

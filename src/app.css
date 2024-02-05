@@ -146,7 +146,7 @@
 
 	/* selection */
 	::selection {
-		@apply bg-primary;
+		@apply bg-main;
 		@apply text-onPrimary;
 	}
 
