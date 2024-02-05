@@ -5,6 +5,8 @@
 	import Main from '$lib/main.svelte';
 	import Footer from '$lib/footer.svelte';
 
+	export let data;
+
 	let box: HTMLDivElement;
 
 	function parseScroll() {
@@ -28,7 +30,9 @@
 	<div
 		class="grid min-h-screen grid-rows-[1fr_auto] pb-1.5 md:snap-start md:pb-3 md:pt-3"
 	>
-		<Main />
+		<Main>
+			{data.posts.length}
+		</Main>
 		<Footer />
 	</div>
 </div>

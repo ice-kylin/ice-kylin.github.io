@@ -3,7 +3,6 @@ export const prerender = true;
 import type { Post } from '$lib/types';
 
 export async function load({ fetch }) {
-	const response = await fetch('api/posts');
-	const posts: Post[] = await response.json();
+	const posts: Post[] = await (await fetch('api/posts')).json();
 	return { posts };
 }

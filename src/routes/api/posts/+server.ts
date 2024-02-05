@@ -2,9 +2,7 @@ import { json } from '@sveltejs/kit';
 import type { Post } from '$lib/types';
 
 async function getPosts() {
-	return Object.entries(
-		import.meta.glob('/src/posts/**/*.md', { eager: true })
-	)
+	return Object.entries(import.meta.glob('/src/posts/*.md', { eager: true }))
 		.map(([path, file]) => {
 			const slug = path.split('/').at(-1)?.replace('.md', '');
 			if (
@@ -20,7 +18,7 @@ async function getPosts() {
 			}
 		})
 		.filter((item) => {
-			return !!item && item.published;
+			return item !== undefined && item.published;
 		})
 		.sort(
 			(first, second) =>

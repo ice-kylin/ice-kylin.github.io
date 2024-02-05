@@ -149,4 +149,10 @@
 		@apply bg-primary;
 		@apply text-onPrimary;
 	}
+
+	/* pattern */
+	.pattern {
+		@apply bg-patten;
+		@apply bg-[length:2px_2px];
+	}
 }
