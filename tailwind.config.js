@@ -1,7 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 let sans = [
-	'HarmonyOS Sans SC',
 	'PingFang SC',
 	'Microsoft YaHei',
 	'-apple-system',

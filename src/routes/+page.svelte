@@ -4,6 +4,7 @@
 	import Cover from '$lib/cover.svelte';
 	import Main from '$lib/main.svelte';
 	import Post from '$lib/main/Post.svelte';
+	import Slogen from '$lib/Slogen.svelte';
 
 	export let data;
 </script>
@@ -15,4 +16,5 @@
 			<Post {post}></Post>
 		{/each}
 	</Main>
+	<Slogen/>
 </Layout>
