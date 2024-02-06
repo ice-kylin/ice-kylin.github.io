@@ -4,7 +4,9 @@
 	import Aside from '$lib/aside.svelte';
 </script>
 
-<div class="border-b border-dotted border-b-outlineVariant lg:grid lg:grid-cols-[1fr_300px]">
+<div
+	class="border-b border-dotted border-b-outlineVariant lg:grid lg:grid-cols-[1fr_300px]"
+>
 	<div class="mx-6 mb-6 mt-12">
 		<div class="hidden items-center gap-2 md:flex">
 			<h1 class="text-3xl font-bold">ICEKYLIN 的博客</h1>

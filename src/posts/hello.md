@@ -100,7 +100,7 @@ Sometimes you have headings directly underneath each other. In those cases you o
 the top margin on the second heading because it usually looks better for the headings to be closer
 together than a paragraph followed by a heading should be.
 
-### When a heading comes after a paragraph …
+### When a heading comes after a paragraph ...
 
 When a heading comes after a paragraph, we need a bit more space, like I already mentioned above.
 Now let's see what a more complex list would look like.

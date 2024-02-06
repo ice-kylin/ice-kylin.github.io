@@ -16,5 +16,5 @@
 			<Post {post}></Post>
 		{/each}
 	</Main>
-	<Slogen/>
+	<Slogen />
 </Layout>

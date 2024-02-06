@@ -6,7 +6,7 @@
 </script>
 
 <footer
-	class="pattern mt-7 flex flex-col items-center gap-2 px-6 py-7 text-center text-xs text-onSurfaceVariant"
+	class="pattern flex flex-col items-center gap-2 px-6 py-7 text-center text-xs text-onSurfaceVariant"
 >
 	<Icon data={iceCream} size="18px" stroke="transparent" />
 	<p>

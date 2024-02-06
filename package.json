@@ -1,6 +1,7 @@
 {
 	"devDependencies": {
 		"@fontsource/magra": "^5.0.8",
+		"@lint-md/eslint-plugin": "^0.1.0",
 		"@mdi/svg": "^7.4.47",
 		"@playwright/test": "^1.41.2",
 		"@sveltejs/adapter-auto": "^3.1.1",
