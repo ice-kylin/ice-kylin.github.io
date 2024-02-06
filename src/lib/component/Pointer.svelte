@@ -1,16 +1,18 @@
 <script lang="ts">
-	import { pointer } from '$lib/store/pointer';
-	import isMob from '$lib/store/isMob';
+	import { isMouseOver } from '$lib/store/pointer';
+	import { isMainColor } from '$lib/store/color';
+	import isMob from '$lib/store/mob';
 	import mousePosition from '$lib/store/mousePosition';
-
-	$: sizeClass = $pointer.isMouseOver
-		? 'w-12 h-12 rounded-3xl'
-		: 'w-5 h-5 rounded-[10px]';
+	import clsx from 'clsx';
 </script>
 
 {#if !$isMob.isMob}
 	<div
-		class={`${sizeClass} pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-1/2 bg-main transition-[border-radius,width,height] duration-300`}
+		class={clsx(
+			'pointer-events-none fixed z-50 -translate-x-1/2 -translate-y-1/2  transition-[border-radius,width,height] duration-300',
+			$isMouseOver ? 'h-12 w-12 rounded-3xl' : 'h-5 w-5 rounded-[10px]',
+			$isMainColor ? 'bg-main' : 'bg-white'
+		)}
 		style={`top: ${$mousePosition.y}px; left: ${$mousePosition.x}px;`}
 	/>
 {/if}

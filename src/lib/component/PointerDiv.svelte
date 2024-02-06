@@ -1,49 +1,24 @@
 <script lang="ts">
-	import { pointer } from '$lib/store/pointer';
+	import type { Icon } from '$lib/store/pointer';
+	import { icon, isMouseOver } from '$lib/store/pointer';
+	import { onDestroy } from 'svelte';
 
-	export let full: boolean = false;
-	export let color: string | undefined = undefined;
-	export let radius: string | undefined = undefined;
-
-	let element: HTMLDivElement;
-	let t: number;
-	let l: number;
-	let w: number;
-	let h: number;
-
-	function getPosition() {
-		const rect = element.getBoundingClientRect();
-
-		t = rect.top;
-		l = rect.left;
-	}
+	let i: Icon = null;
 
 	function handleMouseEnter() {
-		getPosition();
-
-		pointer.set({
-			isMouseOver: true,
-			full,
-			w,
-			h,
-			t,
-			l,
-			color,
-			radius
-		});
+		isMouseOver.set(true);
+		icon.set(i);
 	}
 
 	function handleMouseLeave() {
-		pointer.set({
-			isMouseOver: false
-		});
+		isMouseOver.set(false);
+		icon.set(null);
 	}
+
+	onDestroy(handleMouseLeave);
 </script>
 
 <div
-	bind:clientHeight={h}
-	bind:clientWidth={w}
-	bind:this={element}
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
 	role="presentation"

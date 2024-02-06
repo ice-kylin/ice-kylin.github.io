@@ -9,6 +9,7 @@
 	import emoticonKissOutline from '@mdi/svg/svg/emoticon-kiss-outline.svg?raw';
 	import cardsPlayingOutline from '@mdi/svg/svg/cards-playing-outline.svg?raw';
 	import clsx from 'clsx';
+	import PointerDiv from '$lib/component/PointerDiv.svelte';
 
 	const links = [
 		{
@@ -57,35 +58,37 @@
 		)}
 	>
 		{#each links as link}
-			<li class="mt-6">
-				<a
-					href={link.href}
-					class={clsx(
-						'flex items-center gap-3.5 after:w-full after:border-t after:border-dotted after:transition-colors after:duration-1000',
-						$isMainColor
-							? 'after:border-onPrimary md:after:border-outlineVariant'
-							: 'after:border-white'
-					)}
-				>
-					<div class="hidden w-max md:block">
-						<Icon
-							data={link.icon}
-							size="18px"
-							stroke="transparent"
-						/>
-					</div>
-					<div class="w-max md:hidden">
-						<Icon
-							data={link.icon}
-							size="24px"
-							stroke="transparent"
-						/>
-					</div>
-					<span class="w-max whitespace-nowrap font-bold"
-						>{link.text}</span
+			<PointerDiv>
+				<li class="mt-6">
+					<a
+						href={link.href}
+						class={clsx(
+							'flex items-center gap-3.5 after:w-full after:border-t after:border-dotted after:transition-colors after:duration-1000',
+							$isMainColor
+								? 'after:border-onPrimary md:after:border-outlineVariant'
+								: 'after:border-white'
+						)}
 					>
-				</a>
-			</li>
+						<div class="hidden w-max md:block">
+							<Icon
+								data={link.icon}
+								size="18px"
+								stroke="transparent"
+							/>
+						</div>
+						<div class="w-max md:hidden">
+							<Icon
+								data={link.icon}
+								size="24px"
+								stroke="transparent"
+							/>
+						</div>
+						<span class="w-max whitespace-nowrap font-bold"
+							>{link.text}</span
+						>
+					</a>
+				</li>
+			</PointerDiv>
 		{/each}
 	</ul>
 </nav>
