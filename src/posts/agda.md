@@ -1,5 +1,5 @@
 ---
-title: '函数式编程进阶（1）- Agda 入门'
+title: '函数式编程进阶 1 - Agda 入门'
 description: 暂时没有简介
 date: '2024-2-5'
 categories: [学习, 函数式编程]
@@ -14,6 +14,8 @@ Agda 是一种带有依赖类型的编程语言。由于带有强定型和依赖
 ## 2. Agda 安装
 
 ## 3. Emacs 配置
+
+推荐使用 Emacs 编辑 Agda 文件。首先安装 Emacs，然后安装 Agda 模式。
 
 ## 4. Emacs 使用
 
