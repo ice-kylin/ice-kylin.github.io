@@ -7,7 +7,7 @@
 </script>
 
 <li
-	class="mt-3 flex flex-col gap-2 border-b border-dotted border-b-surfaceContainerHigh pb-2"
+	class="mt-3 flex flex-col gap-2 border-b border-dotted border-b-outlineVariant pb-2"
 >
 	<a href={post.slug} class="font-bold">{post.title}</a>
 	<p class="text-sm text-onSurfaceVariant">{post.description}</p>

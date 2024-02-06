@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { isMainColor } from '$lib/store/color';
-	import { isClose } from '$lib/store/header';
 	import * as config from '$lib/config';
 	import LangButton from '$lib/header/LangButton.svelte';
 	import DarkModeButton from '$lib/header/DarkModeButton.svelte';
@@ -11,13 +10,13 @@
 <div
 	class={clsx(
 		'flex h-full flex-col justify-center gap-6 md:h-auto',
-		(!$isMainColor || !$isClose) && 'text-white'
+		$isMainColor ? 'text-onPrimary md:text-onBackground' : 'text-white'
 	)}
 >
 	<h1
 		class={clsx(
 			'fa transition-colors duration-1000',
-			$isMainColor && $isClose && 'text-main'
+			$isMainColor && 'md:text-main'
 		)}
 	>
 		{config.title}
@@ -25,7 +24,7 @@
 	<p
 		class={clsx(
 			'text-xs transition-colors duration-1000',
-			$isMainColor && $isClose && 'text-onSurfaceVariant'
+			$isMainColor && 'md:text-onSurfaceVariant'
 		)}
 	>
 		粤 ICP 备案 01202 号<br />访问量：<span class="font-num">0</span>

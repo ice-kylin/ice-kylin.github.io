@@ -26,7 +26,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
-				patten: 'radial-gradient(rgb(var(--md-sys-color-surface-container) / 1) 0.5px, rgb(var(--md-sys-color-background) / 0.6) 0.5px)'
+				patten: 'radial-gradient(rgb(var(--md-sys-color-surface-container-highest) / 1) 0.5px, rgb(var(--md-sys-color-background) / 0.6) 0.5px)'
 			},
 			boxShadow: {
 				1: [

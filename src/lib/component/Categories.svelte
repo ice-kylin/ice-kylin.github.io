@@ -3,7 +3,8 @@
 </script>
 
 <div>
-	{#each categories as category}
+	{#each categories as category, i}
 		<a href="/" class="hover:underline">{category}</a>
+		{#if i !== categories.length - 1}>&nbsp;{/if}
 	{/each}
 </div>

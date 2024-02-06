@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Icon } from 'svelte-icon';
 	import { isMainColor } from '$lib/store/color';
-	import { isClose } from '$lib/store/header';
 	import homeRoof from '@mdi/svg/svg/home-roof.svg?raw';
 	import packageVariant from '@mdi/svg/svg/package-variant.svg?raw';
 	import tagOutline from '@mdi/svg/svg/tag-outline.svg?raw';
@@ -54,7 +53,7 @@
 	<ul
 		class={clsx(
 			'text-lg transition-colors duration-1000 md:text-base',
-			(!$isMainColor || !$isClose) && 'text-white'
+			$isMainColor ? 'text-onPrimary md:text-onBackground' : 'text-white'
 		)}
 	>
 		{#each links as link}
@@ -64,9 +63,7 @@
 					class={clsx(
 						'flex items-center gap-3.5 after:w-full after:border-t after:border-dotted after:transition-colors after:duration-1000',
 						$isMainColor
-							? $isClose
-								? 'after:border-surfaceContainerHighest'
-								: 'after:border-white'
+							? 'after:border-onPrimary md:after:border-outlineVariant'
 							: 'after:border-white'
 					)}
 				>

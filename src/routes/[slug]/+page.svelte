@@ -2,9 +2,9 @@
 	import { formatDate, getDate, getRelativeTimeDifference } from '$lib/utils';
 	import Layout from '$lib/layout.svelte';
 	import Dot from '$lib/component/Dot.svelte';
+	import Categories from '$lib/component/Categories.svelte';
 	import Tags from '$lib/component/Tags.svelte';
 	import { onMount } from 'svelte';
-	import Categories from '$lib/component/Categories.svelte';
 
 	export let data;
 
