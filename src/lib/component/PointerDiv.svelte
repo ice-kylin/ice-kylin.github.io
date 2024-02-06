@@ -19,6 +19,7 @@
 </script>
 
 <div
+	class="h-fit w-fit"
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
 	role="presentation"

@@ -33,9 +33,10 @@ module.exports = {
 			parser: '@lint-md/eslint-plugin/lib/parser',
 			rules: {
 				'@lint-md/no-long-code': [
-					2, {
-						'length': 100,
-						'exclude': []
+					2,
+					{
+						length: 100,
+						exclude: []
 					}
 				],
 				'@lint-md/no-trailing-punctuation': 0

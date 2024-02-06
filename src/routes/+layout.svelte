@@ -1,6 +1,7 @@
 <script lang="ts">
 	import '../app.css';
 	import '../font.css';
+	import '@fontsource-variable/inter';
 	import '@fontsource/magra/400.css';
 	import '@fontsource/magra/700.css';
 	import type { VariantProps } from 'class-variance-authority';
@@ -33,7 +34,7 @@
 	$: style = $isMainColor ? '' : `--current: ${$color};`;
 </script>
 
-<div {style} class="px-1.5 md:pl-[220px] md:pr-3">
+<div class="px-1.5 md:pl-[220px] md:pr-3" {style}>
 	{#each dirs as dir}
 		<div
 			class={mask({ dir, color: $isMainColor ? 'main' : 'current' })}

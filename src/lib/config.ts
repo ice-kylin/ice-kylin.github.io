@@ -2,6 +2,7 @@ import { dev } from '$app/environment';
 
 import springFestival2024 from '../assets/images/spring-festival-2024.jpg?enhanced';
 import bird from '../assets/images/bird.webp?enhanced';
+import ucl from '../assets/images/ucl.jpg?enhanced';
 
 // 基本设置
 export const title: string = "ICEKYLIN'S BLOG";
@@ -35,7 +36,8 @@ export const url: string = dev
 // 图片设置
 export const images = {
 	springFestival2024,
-	bird
+	bird,
+	ucl
 };
 
 // 首页设置

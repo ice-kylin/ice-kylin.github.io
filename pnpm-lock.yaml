@@ -10,6 +10,9 @@ dependencies:
     version: 2.1.0
 
 devDependencies:
+  '@fontsource-variable/inter':
+    specifier: ^5.0.16
+    version: 5.0.16
   '@fontsource/magra':
     specifier: ^5.0.8
     version: 5.0.8
@@ -43,6 +46,9 @@ devDependencies:
   '@types/eslint':
     specifier: 8.56.2
     version: 8.56.2
+  '@types/seedrandom':
+    specifier: ^3.0.8
+    version: 3.0.8
   '@types/throttle-debounce':
     specifier: ^5.0.2
     version: 5.0.2
@@ -82,6 +88,9 @@ devDependencies:
   prettier-plugin-tailwindcss:
     specifier: ^0.5.11
     version: 0.5.11(prettier-plugin-svelte@3.1.2)(prettier@3.2.5)
+  seedrandom:
+    specifier: ^3.0.5
+    version: 3.0.5
   shiki:
     specifier: ^0.14.1
     version: 0.14.7
@@ -396,6 +405,10 @@ packages:
   /@eslint/js@8.56.0:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@fontsource-variable/inter@5.0.16:
+    resolution: {integrity: sha512-k+BUNqksTL+AN+o+OV7ILeiE9B5M5X+/jA7LWvCwjbV9ovXTqZyKRhA/x7uYv/ml8WQ0XNLBM7cRFIx4jW0/hg==}
     dev: true
 
   /@fontsource/magra@5.0.8:
@@ -978,6 +991,10 @@ packages:
 
   /@types/pug@2.0.10:
     resolution: {integrity: sha512-Sk/uYFOBAB7mb74XcpizmH0KOR2Pv3D2Hmrh1Dmy5BmK3MpdSa5kqZcg6EKBdklU0bFXX9gCfzvpnyUehrPIuA==}
+    dev: true
+
+  /@types/seedrandom@3.0.8:
+    resolution: {integrity: sha512-TY1eezMU2zH2ozQoAFAQFOPpvP15g+ZgSfTZt31AUUH/Rxtnz3H+A/Sv1Snw2/amp//omibc+AEkTaA8KUeOLQ==}
     dev: true
 
   /@types/semver@7.5.6:
@@ -2954,6 +2971,10 @@ packages:
       graceful-fs: 4.2.11
       mkdirp: 0.5.6
       rimraf: 2.7.1
+    dev: true
+
+  /seedrandom@3.0.5:
+    resolution: {integrity: sha512-8OwmbklUNzwezjGInmZ+2clQmExQPvomqjL7LFqOYqtmuxRgQYqOD3mHaU+MvZn5FLUeVxVfQjwLZW/n/JFuqg==}
     dev: true
 
   /semver@7.6.0:

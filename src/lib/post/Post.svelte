@@ -22,12 +22,12 @@
 <h1 class="text-3xl font-bold">{meta.title}</h1>
 <div class="mt-6 text-sm text-onSurfaceVariant">
 	<div class="flex flex-col gap-2 text-sm">
-		<div class="flex flex-wrap items-center gap-2">
+		<div class="flex flex-wrap items-center gap-x-2">
 			<span class="font-num">{formatDate(date)}</span>
 			<Dot color="main"></Dot>
 			<span class="font-num text-main">{timeDiff}</span>
 		</div>
-		<div class="flex flex-wrap items-center gap-2">
+		<div class="flex flex-wrap items-center gap-x-2">
 			{#each meta.categories as category, i}
 				<a href="/" class="hover:underline">{category}</a>
 				{#if i !== meta.categories.length - 1}>{/if}

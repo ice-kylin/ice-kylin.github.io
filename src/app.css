@@ -37,18 +37,6 @@
 		--md-sys-color-inverse-surface: 56 46 46;
 		--md-sys-color-inverse-on-surface: 255 237 236;
 		--md-sys-color-inverse-primary: 255 179 178;
-		--md-sys-color-primary-fixed: 255 218 217;
-		--md-sys-color-on-primary-fixed: 59 8 13;
-		--md-sys-color-primary-fixed-dim: 255 179 178;
-		--md-sys-color-on-primary-fixed-variant: 115 51 53;
-		--md-sys-color-secondary-fixed: 255 218 217;
-		--md-sys-color-on-secondary-fixed: 44 21 21;
-		--md-sys-color-secondary-fixed-dim: 230 189 188;
-		--md-sys-color-on-secondary-fixed-variant: 93 63 63;
-		--md-sys-color-tertiary-fixed: 255 222 173;
-		--md-sys-color-on-tertiary-fixed: 40 25 0;
-		--md-sys-color-tertiary-fixed-dim: 228 193 141;
-		--md-sys-color-on-tertiary-fixed-variant: 91 67 26;
 		--md-sys-color-surface-dim: 232 214 213;
 		--md-sys-color-surface-bright: 255 248 247;
 		--md-sys-color-surface-container-lowest: 255 255 255;
@@ -90,6 +78,17 @@
 		--md-sys-color-inverse-surface: 240 222 222;
 		--md-sys-color-inverse-on-surface: 56 46 46;
 		--md-sys-color-inverse-primary: 144 74 75;
+		--md-sys-color-surface-dim: 26 17 17;
+		--md-sys-color-surface-bright: 66 55 54;
+		--md-sys-color-surface-container-lowest: 20 12 12;
+		--md-sys-color-surface-container-low: 34 25 25;
+		--md-sys-color-surface-container: 39 29 29;
+		--md-sys-color-surface-container-high: 50 40 39;
+		--md-sys-color-surface-container-highest: 61 50 50;
+		--wb: 0 0 0;
+	}
+
+	html {
 		--md-sys-color-primary-fixed: 255 218 217;
 		--md-sys-color-on-primary-fixed: 59 8 13;
 		--md-sys-color-primary-fixed-dim: 255 179 178;
@@ -102,14 +101,6 @@
 		--md-sys-color-on-tertiary-fixed: 40 25 0;
 		--md-sys-color-tertiary-fixed-dim: 228 193 141;
 		--md-sys-color-on-tertiary-fixed-variant: 91 67 26;
-		--md-sys-color-surface-dim: 26 17 17;
-		--md-sys-color-surface-bright: 66 55 54;
-		--md-sys-color-surface-container-lowest: 20 12 12;
-		--md-sys-color-surface-container-low: 34 25 25;
-		--md-sys-color-surface-container: 39 29 29;
-		--md-sys-color-surface-container-high: 50 40 39;
-		--md-sys-color-surface-container-highest: 61 50 50;
-		--wb: 0 0 0;
 	}
 
 	/* scrollbar */

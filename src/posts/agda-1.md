@@ -1,6 +1,6 @@
 ---
 title: '函数式编程进阶 1 - Agda 入门'
-description: 暂时没有简介
+description: 这是函数式编程进阶系列的第一篇文章，介绍了 Agda 的基本使用。
 date: '2024-2-5'
 categories: [学习, 函数式编程]
 tags: [函数式编程, AFP, FP, Agda]

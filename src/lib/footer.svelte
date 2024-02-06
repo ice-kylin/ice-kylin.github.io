@@ -11,8 +11,8 @@
 	<Icon data={iceCream} size="18px" stroke="transparent" />
 	<p>
 		$
-		{#each config.links as link, i}&nbsp;<A href={link.url}>{link.name}</A
-			>{#if i !== config.links.length - 1}&nbsp;.{/if}
+		{#each config.links as link, i}&nbsp;<A href={link.url}>{link.name}</A>
+			{#if i !== config.links.length - 1}&nbsp;.{/if}
 		{/each}&nbsp;$
 	</p>
 	<p>
