@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Dot from '$lib/component/Dot.svelte';
 	import type { Post } from '$lib/types';
-	import Tags from '$lib/main/Tags.svelte';
+	import Tags from '$lib/component/Tags.svelte';
 
 	export let post: Post;
 </script>

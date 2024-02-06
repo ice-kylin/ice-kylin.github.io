@@ -3,5 +3,5 @@
 </script>
 
 {#each tags as tag}
-	<a href="/">#&nbsp;{tag}</a>
+	<a href="/" class="hover:underline">#&nbsp;{tag}</a>
 {/each}
