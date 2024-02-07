@@ -131,10 +131,11 @@
 	}
 
 	/* cursor */
-	* {
-		cursor: none !important;
-	}
-
+	/**
+    * {
+        cursor: none !important;
+    }
+     */
 	/* selection */
 	::selection {
 		@apply bg-main;

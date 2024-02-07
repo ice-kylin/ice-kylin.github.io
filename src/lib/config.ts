@@ -1,8 +1,11 @@
 import { dev } from '$app/environment';
 
-import springFestival2024 from '../assets/images/spring-festival-2024.jpg?enhanced';
-import bird from '../assets/images/bird.webp?enhanced';
+import springFestival2024 from '../assets/covers/spring-festival-2024.jpg?enhanced';
+import bird from '../assets/covers/bird.webp?enhanced';
 import ucl from '../assets/images/ucl.jpg?enhanced';
+import neom from '../assets/images/neom.avif?enhanced';
+import kevinZonda from '../assets/persons/kevin.png?enhanced';
+import type { Friend } from '$lib/types';
 
 // 基本设置
 export const title: string = "ICEKYLIN'S BLOG";
@@ -37,9 +40,26 @@ export const url: string = dev
 export const images = {
 	springFestival2024,
 	bird,
-	ucl
+	ucl,
+	neom
 };
 
 // 首页设置
-export const cover = images.bird;
-export const color = '0 0 0';
+export const cover: string = springFestival2024;
+export const coverTitle: string = '二〇二四新春快乐';
+export const color: string = '226 22 33';
+
+// 朋友设置
+export const friends: Friend[] = [
+	{
+		name: 'KevinZonda',
+		description: '我的大学同学',
+		links: {
+			website: 'https://kevinzonda.com/',
+			github: 'https://github.com/KevinZonda',
+			x: 'https://twitter.com/toncoin_cn',
+			linkedin: 'https://www.linkedin.com/in/shixiang/'
+		},
+		avatar: kevinZonda
+	}
+];

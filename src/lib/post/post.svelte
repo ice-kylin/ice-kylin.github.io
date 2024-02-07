@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatDate, getDate, getRelativeTimeDifference } from '$lib/utils';
-	import Dot from '$lib/component/Dot.svelte';
+	import Dot from '$lib/component/dot.svelte';
 	import { onMount } from 'svelte';
 
 	export let meta: {

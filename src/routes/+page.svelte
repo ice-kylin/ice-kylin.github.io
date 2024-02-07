@@ -3,8 +3,8 @@
 	import Layout from '$lib/component/layout.svelte';
 	import Cover from '$lib/home/cover.svelte';
 	import Main from '$lib/home/main.svelte';
-	import Post from '$lib/home/Post.svelte';
-	import Slogen from '$lib/home/Slogen.svelte';
+	import Post from '$lib/home/post.svelte';
+	import Slogen from '$lib/home/slogan.svelte';
 	import seedrandom from 'seedrandom';
 
 	export let data;

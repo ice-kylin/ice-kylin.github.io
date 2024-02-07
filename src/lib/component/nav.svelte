@@ -9,7 +9,8 @@
 	import emoticonKissOutline from '@mdi/svg/svg/emoticon-kiss-outline.svg?raw';
 	import cardsPlayingOutline from '@mdi/svg/svg/cards-playing-outline.svg?raw';
 	import clsx from 'clsx';
-	import PointerDiv from '$lib/component/PointerDiv.svelte';
+	import PointerDiv from '$lib/component/pointerDiv.svelte';
+	import { isClose } from '$lib/store/header';
 
 	const links = [
 		{
@@ -38,7 +39,7 @@
 			icon: imageFilterHdrOutline
 		},
 		{
-			href: '/',
+			href: '/friends',
 			text: '友链',
 			icon: emoticonKissOutline
 		},
@@ -53,21 +54,24 @@
 <nav>
 	<ul
 		class={clsx(
-			'text-lg transition-colors duration-1000 md:text-base',
+			'text-lg md:text-base',
 			$isMainColor ? 'text-onPrimary md:text-onBackground' : 'text-white'
 		)}
 	>
 		{#each links as link}
-			<PointerDiv>
-				<li class="mt-6">
+			<li class="mt-6">
+				<PointerDiv>
 					<a
 						href={link.href}
 						class={clsx(
-							'flex items-center gap-3.5 after:w-full after:border-t after:border-dotted after:transition-colors after:duration-1000',
+							'flex items-center gap-3.5 after:w-full after:border-t after:border-dotted',
 							$isMainColor
-								? 'after:border-onPrimary md:after:border-outlineVariant'
+								? 'after:border-onPrimary hover:text-main md:after:border-outlineVariant'
 								: 'after:border-white'
 						)}
+						on:click={() => {
+							isClose.set(true);
+						}}
 					>
 						<div class="hidden w-max md:block">
 							<Icon
@@ -87,8 +91,8 @@
 							>{link.text}</span
 						>
 					</a>
-				</li>
-			</PointerDiv>
+				</PointerDiv>
+			</li>
 		{/each}
 	</ul>
 </nav>

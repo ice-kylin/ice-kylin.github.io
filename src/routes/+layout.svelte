@@ -8,9 +8,8 @@
 	import { cva } from 'class-variance-authority';
 	import { color, isMainColor } from '$lib/store/color';
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
-	import Pointer from '$lib/component/Pointer.svelte';
 	import Header from '$lib/component/header.svelte';
-	import MobileHeader from '$lib/header/MobileHeader.svelte';
+	import MobileHeader from '$lib/header/mobileHeader.svelte';
 
 	type MaskProps = VariantProps<typeof mask>;
 	type Dir = MaskProps['dir'];
@@ -40,7 +39,7 @@
 			class={mask({ dir, color: $isMainColor ? 'main' : 'current' })}
 		></div>
 	{/each}
-	<Pointer></Pointer>
+	<!--<Pointer></Pointer>-->
 	<SvelteTheme></SvelteTheme>
 	<MobileHeader />
 	<Header />

@@ -19,7 +19,7 @@
 </script>
 
 <div
-	class="h-fit w-fit"
+	{...$$props}
 	on:mouseenter={handleMouseEnter}
 	on:mouseleave={handleMouseLeave}
 	role="presentation"

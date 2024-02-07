@@ -4,6 +4,7 @@ description: 这是迁移到 SvelteKit 的第一篇文章。测试了 Tailwind C
 date: '2024-2-5'
 categories: [学术]
 tags: [SvelteKit, Svelte, Tailwind]
+img: 'neom'
 published: true
 ---
 
