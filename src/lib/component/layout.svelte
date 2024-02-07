@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { color as c, isMainColor } from '$lib/store/color';
-	import Footer from '$lib/footer.svelte';
+	import Footer from '$lib/component/footer.svelte';
 	import { onDestroy } from 'svelte';
 	import clsx from 'clsx';
 

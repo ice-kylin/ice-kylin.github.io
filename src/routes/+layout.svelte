@@ -9,7 +9,7 @@
 	import { color, isMainColor } from '$lib/store/color';
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 	import Pointer from '$lib/component/Pointer.svelte';
-	import Header from '$lib/header.svelte';
+	import Header from '$lib/component/header.svelte';
 	import MobileHeader from '$lib/header/MobileHeader.svelte';
 
 	type MaskProps = VariantProps<typeof mask>;

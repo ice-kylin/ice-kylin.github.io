@@ -1,10 +1,10 @@
 <script lang="ts">
 	import * as config from '$lib/config';
-	import Layout from '$lib/layout.svelte';
-	import Cover from '$lib/cover.svelte';
-	import Main from '$lib/main.svelte';
-	import Post from '$lib/main/Post.svelte';
-	import Slogen from '$lib/Slogen.svelte';
+	import Layout from '$lib/component/layout.svelte';
+	import Cover from '$lib/home/cover.svelte';
+	import Main from '$lib/home/main.svelte';
+	import Post from '$lib/home/Post.svelte';
+	import Slogen from '$lib/home/Slogen.svelte';
 	import seedrandom from 'seedrandom';
 
 	export let data;

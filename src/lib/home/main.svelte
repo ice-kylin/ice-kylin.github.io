@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Posts from './main/Posts.svelte';
-	import Aside from '$lib/aside.svelte';
+	import Posts from './Posts.svelte';
+	import Aside from '$lib/component/aside.svelte';
 </script>
 
 <div

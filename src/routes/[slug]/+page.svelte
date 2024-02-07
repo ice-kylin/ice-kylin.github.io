@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Layout from '$lib/layout.svelte';
+	import Layout from '$lib/component/layout.svelte';
 	import Post from '$lib/post/Post.svelte';
 	import SideTitle from '$lib/component/SideTitle.svelte';
 
