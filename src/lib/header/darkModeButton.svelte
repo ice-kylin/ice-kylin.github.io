@@ -13,7 +13,10 @@
 				: 'dark';
 </script>
 
-<button class="hover:text-main" on:click={() => setTheme(nextTheme)}>
+<button
+	class="text-inherit md:hover:text-main"
+	on:click={() => setTheme(nextTheme)}
+>
 	<Icon
 		data={$themeStore.theme === 'dark'
 			? brightness4

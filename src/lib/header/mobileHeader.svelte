@@ -15,8 +15,10 @@
 	)}
 >
 	<MobileHeaderButton></MobileHeaderButton>
-	<div class={clsx('items-center gap-2.5', $isClose ? 'flex' : 'hidden')}>
-		<Icon data={iceCream} size="20px" stroke="transparent" />
-		<span class="fa mt-1">{config.title}</span>
-	</div>
+	<a href="/">
+		<div class={clsx('items-center gap-2.5', $isClose ? 'flex' : 'hidden')}>
+			<Icon data={iceCream} size="20px" stroke="transparent" />
+			<span class="fa mt-1">{config.title}</span>
+		</div>
+	</a>
 </div>
