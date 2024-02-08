@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { formatDate, getDate, getRelativeTimeDifference } from '$lib/utils';
-	import Dot from '$lib/component/dot.svelte';
 	import { onMount } from 'svelte';
+	import { Icon } from 'svelte-icon';
+	import informationSymbol from '@mdi/svg/svg/information-symbol.svg?raw';
+	import Dot from '$lib/component/dot.svelte';
 
 	export let meta: {
 		title: string;
@@ -40,7 +42,10 @@
 	</div>
 </div>
 <div class="pattern mt-6 p-3.5 text-sm">
-	<h2 class="font-bold text-main">内容提要</h2>
+	<div class="flex items-center text-main">
+		<Icon data={informationSymbol} size="24px" stroke="transparent" />
+		<h2 class="font-bold">内容提要</h2>
+	</div>
 	<p class="mt-2 text-onSurfaceVariant">
 		{meta.description}
 	</p>

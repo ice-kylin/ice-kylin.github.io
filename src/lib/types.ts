@@ -10,6 +10,14 @@ export type Post = {
 	published: boolean;
 };
 
+export type Tag = {
+	name: string;
+	total: number;
+	posts: Post[];
+};
+
+export type TagInfo = Omit<Tag, 'posts'>;
+
 export type Friend = {
 	name: string;
 	description: string;

@@ -1,9 +1,9 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 let sans = [
-	'Inter Variable',
 	'HarmonyOS Sans SC',
 	'PingFang SC',
+	'Inter Variable',
 	'Microsoft YaHei',
 	'-apple-system',
 	'BlinkMacSystemFont',

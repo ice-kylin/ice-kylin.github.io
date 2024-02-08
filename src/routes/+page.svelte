@@ -12,8 +12,8 @@
 
 <Layout color={config.color} cover={true}>
 	<Cover slot="cover" />
-	<Main>
-		{#each data.posts.slice(0, 25) as post, i}
+	<Main tagInfos={data.tagInfos}>
+		{#each data.posts as post, i}
 			<Post {post} wide={seedrandom(`${post.title}${i}`)() < 0.5}></Post>
 		{/each}
 	</Main>

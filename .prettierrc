@@ -5,6 +5,12 @@
 			"options": {
 				"parser": "svelte"
 			}
+		},
+		{
+			"files": "*.md",
+			"options": {
+				"printWidth": 9999
+			}
 		}
 	],
 	"plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],

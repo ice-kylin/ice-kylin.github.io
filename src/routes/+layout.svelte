@@ -9,7 +9,7 @@
 	import { color, isMainColor } from '$lib/store/color';
 	import SvelteTheme from 'svelte-themes/SvelteTheme.svelte';
 	import Header from '$lib/component/header.svelte';
-	import MobileHeader from '$lib/header/mobileHeader.svelte';
+	import MobileHeader from '$lib/component/mobileHeader.svelte';
 
 	type MaskProps = VariantProps<typeof mask>;
 	type Dir = MaskProps['dir'];

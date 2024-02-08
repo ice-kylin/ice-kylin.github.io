@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { isMainColor } from '$lib/store/color';
 	import * as config from '$lib/config';
-	import LangButton from '$lib/header/langButton.svelte';
-	import DarkModeButton from '$lib/header/darkModeButton.svelte';
-	import RSSLink from '$lib/header/rss.svelte';
+	import LangButton from '$lib/component/langButton.svelte';
+	import DarkModeButton from '$lib/component/darkModeButton.svelte';
+	import RSSLink from '$lib/component/rss.svelte';
 	import clsx from 'clsx';
 </script>
 
