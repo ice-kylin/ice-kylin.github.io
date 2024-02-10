@@ -1,15 +1,13 @@
-// import springFestival2024 from '../assets/covers/spring-festival-2024.jpg?enhanced';
 // import bird from '../assets/covers/bird.webp?enhanced';
 import ucl from '../assets/images/ucl.jpg?enhanced';
 import neom from '../assets/images/neom.avif?enhanced';
-import pote from '../assets/covers/pote.jpg?enhanced';
 import kevinZonda from '../assets/persons/kevin.png?enhanced';
 import type { Friend } from '$lib/types';
 
 // 基本设置
-export const title: string = "ICEKYLIN'S BLOG";
+export const TITLE: string = "ICEKYLIN'S BLOG";
 // export const description: string = '代码改变世界';
-export const links = [
+export const LINKS = [
 	{
 		name: 'GitHub',
 		url: 'https://github.com/ice-kylin'
@@ -33,19 +31,15 @@ export const links = [
 ];
 
 // 图片设置
-export const images = {
+export const IMAGES = {
 	// springFestival2024,
 	// bird,
 	ucl,
 	neom
 };
 
-// 首页设置
-export const cover: string = pote;
-export const color: string = '32 29 41';
-
 // 朋友设置
-export const friends: Friend[] = [
+export const FRIENDS: Friend[] = [
 	{
 		name: 'KevinZonda',
 		description: '我的大学同学',
@@ -58,3 +52,6 @@ export const friends: Friend[] = [
 		avatar: kevinZonda
 	}
 ];
+
+// 分页设置
+export const PAGINATION = 16;

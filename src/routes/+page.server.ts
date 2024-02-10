@@ -1,5 +1,7 @@
-import { posts, tagInfos } from '$lib/data';
+import type { PageServerLoad } from './$types';
+import type { HomeData } from '$lib/types';
+import { homeData } from '$lib/data';
 
-export async function load() {
-	return { posts: (await posts).slice(0, 25), tagInfos: await tagInfos };
-}
+export const load: PageServerLoad = async (): Promise<HomeData> => {
+	return await homeData;
+};

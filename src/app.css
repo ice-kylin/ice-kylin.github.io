@@ -113,38 +113,10 @@
 		scrollbar-width: none;
 	}
 
-	/* font */
-	.small-caps {
-		font-variant: small-caps;
-	}
-
-	.fs {
-		@apply font-serif;
-		@apply font-bold;
-		/*@apply sm:font-normal;*/
-	}
-
-	.fa {
-		@apply font-art;
-		@apply font-bold;
-		/*@apply sm:font-normal;*/
-	}
-
 	/* cursor */
 	/**
     * {
         cursor: none !important;
     }
      */
-	/* selection */
-	::selection {
-		@apply bg-main;
-		@apply text-onPrimary;
-	}
-
-	/* pattern */
-	.pattern {
-		@apply bg-patten;
-		@apply bg-[length:2px_2px];
-	}
 }

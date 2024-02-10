@@ -1,5 +1,4 @@
 import { error } from '@sveltejs/kit';
-import { tagInfos } from '$lib/data';
 
 export async function load({ params }) {
 	try {
@@ -7,8 +6,7 @@ export async function load({ params }) {
 
 		return {
 			content: post.default,
-			meta: post.metadata,
-			tagInfos: await tagInfos
+			meta: post.metadata
 		};
 	} catch (e) {
 		throw error(404, `Could not find ${params.slug}`);

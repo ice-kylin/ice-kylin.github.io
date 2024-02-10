@@ -1,6 +1,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 let sans = [
+	'Open Sans Variable',
 	'HarmonyOS Sans SC',
 	'PingFang SC',
 	'Inter Variable',
@@ -22,9 +23,6 @@ export default {
 	darkMode: ['class', '[data-mode="dark"]'],
 	theme: {
 		extend: {
-			backgroundImage: {
-				patten: 'radial-gradient(rgb(var(--md-sys-color-surface-container-highest) / 1) 0.5px, rgb(var(--md-sys-color-background) / 0.6) 0.5px)'
-			},
 			boxShadow: {
 				1: [
 					'0 1px 2px rgba(0, 0, 0, 0.3)',

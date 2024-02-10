@@ -5,6 +5,7 @@ date: '2024-2-5'
 categories: [学术]
 tags: [SvelteKit, Svelte, Tailwind]
 img: 'neom'
+sticky: true
 published: true
 ---
 
