@@ -17,6 +17,8 @@
 />
 <Banner />
 <main class="relative -top-20 -mb-20">
-	<Posts />
+	<!--suppress JSUnresolvedReference -->
+	<Posts posts={data.posts} />
 </main>
+<!--suppress JSUnresolvedReference -->
 <Tags tags={data.tags} />

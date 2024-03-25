@@ -6,51 +6,51 @@ export type PostPreviewsResponse = {
 			description: string;
 			publishedAt: string;
 			slug: string;
-			authors: {
-				data: {
-					id: number;
-					attributes: {
-						name: string;
-						avatar: {
-							data: {
-								id: number;
-								attributes: {
-									url: string;
-								};
-							};
-						};
-					};
-				}[];
-			}[];
-			cover: {
-				data: {
-					id: number;
-					attributes: {
-						url: string;
-					};
-				};
-			};
-			category: {
-				data: {
-					id: number;
-					attributes: {
-						slug: string;
-						parent: {
-							data: {
-								id: number;
-								attributes: {
-									category: string;
-									slug: string;
-								};
-							};
-						};
-					};
-				};
-			};
+			authors: AuthorPreviewResponse;
+			cover: Img;
+			category: CategoryPreviewResponse;
 		};
 	}[];
 	meta: {
 		pagination: PaginationStart;
+	};
+};
+
+export type AuthorPreviewResponse = {
+	data: {
+		id: number;
+		attributes: {
+			name: string;
+			slug: string;
+			avatar: Img;
+		};
+	}[];
+};
+
+export type Img = {
+	data: {
+		id: number;
+		attributes: {
+			url: string;
+		};
+	};
+};
+
+export type CategoryPreviewResponse = {
+	data: {
+		id: number;
+		attributes: {
+			slug: string;
+			parent: {
+				data: {
+					id: number;
+					attributes: {
+						category: string;
+						slug: string;
+					};
+				};
+			};
+		};
 	};
 };
 
@@ -59,17 +59,18 @@ export type PostPreview = {
 	description: string;
 	publishedAt: string;
 	slug: string;
-	authors: Author[];
+	authors: AuthorPreview[];
 	cover: string;
-	category: Category;
+	category: CategoryPreview;
 };
 
-export type Author = {
+export type AuthorPreview = {
 	name: string;
+	slug: string;
 	avatar: string;
 };
 
-export type Category = {
+export type CategoryPreview = {
 	category: string;
 	slug: string;
 };
@@ -77,14 +78,14 @@ export type Category = {
 export type TagsResponse = {
 	data: {
 		id: number;
-		attributes: Tag;
+		attributes: TagPreview;
 	}[];
 	meta: {
 		pagination: PaginationPage;
 	};
 };
 
-export type Tag = {
+export type TagPreview = {
 	tag: string;
 	slug: string;
 };
@@ -103,6 +104,6 @@ export type PaginationPage = {
 };
 
 export type Home = {
-	posts: [];
-	tags: Tag[];
+	posts: PostPreview[];
+	tags: TagPreview[];
 };

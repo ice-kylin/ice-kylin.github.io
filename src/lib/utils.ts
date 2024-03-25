@@ -1,9 +1,9 @@
-export function getDate(date: string): Date {
-	return new Date(date.replaceAll('-', '/'));
-}
-
-export function formatDate(date: Date) {
-	return `${date.getFullYear()} 年 ${date.getMonth() + 1} 月 ${date.getDate()} 日`;
+export function formatDate(dateString: string): string {
+	return new Intl.DateTimeFormat('en-US', {
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric'
+	}).format(new Date(dateString));
 }
 
 export function getRelativeTimeDifference(targetDate: Date): string {
