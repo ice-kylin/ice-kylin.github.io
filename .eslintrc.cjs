@@ -32,14 +32,8 @@ module.exports = {
 			files: ['*.md'],
 			parser: '@lint-md/eslint-plugin/lib/parser',
 			rules: {
-				'@lint-md/no-long-code': [
-					2,
-					{
-						length: 100,
-						exclude: []
-					}
-				],
-				'@lint-md/no-trailing-punctuation': 0
+				'@lint-md/no-trailing-punctuation': 0,
+				'@lint-md/no-long-code': 0
 			}
 		}
 	]

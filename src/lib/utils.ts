@@ -45,3 +45,9 @@ export function getRelativeTimeDifference(targetDate: Date): string {
 		return '刚刚';
 	}
 }
+
+export const API_URL_SERVER = import.meta.env.VITE_API_URL_SERVER;
+export const API_URL_CLIENT =
+	import.meta.env.MODE === 'development'
+		? import.meta.env.VITE_API_URL_CLIENT_TEST
+		: import.meta.env.VITE_API_URL_CLIENT_PROD;

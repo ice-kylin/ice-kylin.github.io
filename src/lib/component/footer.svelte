@@ -1,0 +1,43 @@
+<script lang="ts">
+	import * as config from '$lib/config';
+	import { Icon } from 'svelte-icon';
+	import arrowUp from '@mdi/svg/svg/arrow-up.svg?raw';
+	import cardsDiamondOutline from '@mdi/svg/svg/cards-diamond-outline.svg?raw';
+	import A from '$lib/component/a.svelte';
+</script>
+
+<footer class="text-pretty pt-6 font-mono text-xs">
+	<div class="bg-onSurfaceVariant">
+		<div
+			class="mx-auto flex max-w-screen-xl flex-row-reverse gap-3 px-6 py-3 text-surface"
+		>
+			<Icon data={arrowUp} size="16px" stroke="transparent" />
+			Back To Top
+		</div>
+	</div>
+	<div class="bg-onBackground">
+		<div class="mx-auto max-w-screen-xl px-6 py-3 text-background">
+			<Icon data={cardsDiamondOutline} size="32px" stroke="transparent" />
+			<p class="mt-3">
+				Code licensed under <A
+					href="https://www.gnu.org/licenses/gpl-3.0.html">GPLv3</A
+				>, articles under
+				<A href="https://creativecommons.org/licenses/by-sa/4.0/deed.en"
+					>CC BY-SA 4.0</A
+				>. Design by icekylin, inspired by
+				<A href="https://blog.github.com">Github Blog</A> and created with
+				love (≧∇≦) by icekylin.
+			</p>
+		</div>
+	</div>
+	<div class="bg-onSurfaceVariant">
+		<div class="mx-auto max-w-screen-xl px-6 pb-6 pt-3 text-surface">
+			$
+			{#each config.LINKS as link, i}&nbsp;<A href={link.url}
+					>{link.name}</A
+				>
+				{#if i !== config.LINKS.length - 1}.{/if}
+			{/each}&nbsp;$
+		</div>
+	</div>
+</footer>

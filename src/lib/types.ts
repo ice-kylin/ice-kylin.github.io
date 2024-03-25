@@ -1,111 +1,108 @@
-export type Post = {
+export type PostPreviewsResponse = {
+	data: {
+		id: number;
+		attributes: {
+			title: string;
+			description: string;
+			publishedAt: string;
+			slug: string;
+			authors: {
+				data: {
+					id: number;
+					attributes: {
+						name: string;
+						avatar: {
+							data: {
+								id: number;
+								attributes: {
+									url: string;
+								};
+							};
+						};
+					};
+				}[];
+			}[];
+			cover: {
+				data: {
+					id: number;
+					attributes: {
+						url: string;
+					};
+				};
+			};
+			category: {
+				data: {
+					id: number;
+					attributes: {
+						slug: string;
+						parent: {
+							data: {
+								id: number;
+								attributes: {
+									category: string;
+									slug: string;
+								};
+							};
+						};
+					};
+				};
+			};
+		};
+	}[];
+	meta: {
+		pagination: PaginationStart;
+	};
+};
+
+export type PostPreview = {
 	title: string;
+	description: string;
+	publishedAt: string;
 	slug: string;
-	description: string;
-	date: string;
-	modified?: string;
-	categories: string[];
-	tags?: string[];
-	img?: string;
-	author?: string;
-	avatar?: string;
-	sticky?: boolean;
-	published: boolean;
+	authors: Author[];
+	cover: string;
+	category: Category;
 };
 
-export type Category = {
+export type Author = {
 	name: string;
-	total: number;
-	categories: CategoryContents;
-};
-
-export type CategoryContent = {
-	post?: PostPreview;
-	category?: Category;
-};
-
-export type CategoryContents = CategoryContent[];
-
-export type Tag = {
-	name: string;
-	total: number;
-	posts: PostPreviews;
-};
-
-export type Page = {
-	current: number;
-	total: number;
-};
-
-export type PostPreview = Omit<
-	Post,
-	'modified' | 'tags' | 'published' | 'sticky'
->;
-
-export type PostPreviews = PostPreview[];
-
-export type CategoryPreview = {
-	name: string;
-	total: number;
-	posts: PostPreviews;
-	subCategories: string[];
-};
-
-export type CategoryPreviews = CategoryPreview[];
-
-export type TagPreview = Omit<Tag, 'posts'>;
-
-export type TagPreviews = TagPreview[];
-
-// 首页
-export type HomeData = {
-	latest: PostPreviews;
-	sticky: PostPreviews;
-	categories: CategoryPreviews;
-	tags: TagPreviews;
-};
-
-// 文章
-export type PostData = {
-	prev?: PostPreview;
-	next?: PostPreview;
-	related: PostPreviews;
-	tags: Tag[];
-};
-
-// 分类
-export type CategoryData = {
-	category: CategoryPreview;
-	page: Page;
-};
-
-// 标签
-export type TagData = {
-	tag: Tag;
-	page: Page;
-};
-
-// 时间线
-export type TimelineData = {
-	posts: PostPreviews;
-	page: Page;
-};
-
-// 画廊
-
-// 友情链接
-export type Friend = {
-	name: string;
-	description: string;
-	links: Links;
 	avatar: string;
 };
 
-export type Links = {
-	website: string;
-	github?: string;
-	x?: string;
-	linkedin?: string;
+export type Category = {
+	category: string;
+	slug: string;
 };
 
-// 关于
+export type TagsResponse = {
+	data: {
+		id: number;
+		attributes: Tag;
+	}[];
+	meta: {
+		pagination: PaginationPage;
+	};
+};
+
+export type Tag = {
+	tag: string;
+	slug: string;
+};
+
+export type PaginationStart = {
+	start: number;
+	limit: number;
+	total: number;
+};
+
+export type PaginationPage = {
+	page: number;
+	pageSize: number;
+	pageCount: number;
+	total: number;
+};
+
+export type Home = {
+	posts: [];
+	tags: Tag[];
+};
