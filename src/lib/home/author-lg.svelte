@@ -7,7 +7,7 @@
 </script>
 
 <div class="flex flex-wrap items-center justify-between gap-2 pt-6">
-	<div class="flex items-center gap-5">
+	<div class="flex items-center gap-8">
 		<AuthorAvatars authors={post.authors} />
 		<p class="text-sm font-bold lg:text-base">
 			<AuthorNames authors={post.authors} />

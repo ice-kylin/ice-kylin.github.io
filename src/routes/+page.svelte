@@ -16,9 +16,14 @@
 	slashColor="rgb(var(--md-sys-color-outline-variant) / var(--tw-text-opacity))"
 />
 <Banner />
-<main class="relative -top-20 -mb-20">
-	<!--suppress JSUnresolvedReference -->
-	<Posts posts={data.posts} />
-</main>
+<!--suppress JSUnresolvedReference -->
+<Posts posts={data.posts} />
+<section class="mx-auto max-w-screen-xl p-6">
+	<div
+		class="border-b border-t-[5px] border-b-outlineVariant border-t-onBackground py-3 text-xl font-bold"
+	>
+		生活
+	</div>
+</section>
 <!--suppress JSUnresolvedReference -->
 <Tags tags={data.tags} />

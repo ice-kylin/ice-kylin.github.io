@@ -113,6 +113,11 @@
 		scrollbar-width: none;
 	}
 
+	/* gradient */
+	.night {
+		@apply bg-gradient-to-r from-[#AC32E4] from-0% via-[#7918F2] via-[48%] to-[#4801FF];
+	}
+
 	/* cursor */
 	/**
     * {

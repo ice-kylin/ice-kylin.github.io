@@ -1,13 +1,18 @@
 <script lang="ts">
 	import { API_URL_CLIENT } from '$lib/utils.js';
 	import type { PostPreview } from '$lib/types';
-	import AuthorLG from '$lib/home/author-lg.svelte';
+	import AuthorMD from '$lib/home/author-md.svelte';
+	import { clsx } from 'clsx';
 
 	export let post: PostPreview;
+	export let last = false;
 </script>
 
 <article
-	class="col-span-12 border-b border-b-outlineVariant py-6 lg:col-span-7 lg:border-b-0"
+	class={clsx(
+		'col-span-12 border-outlineVariant py-6 lg:col-span-6 lg:border-b-0 lg:border-t',
+		!last && 'border-b'
+	)}
 >
 	<a href={`/${post.slug}`}>
 		<div
@@ -22,7 +27,7 @@
 		>
 	</h2>
 	<a
-		class="line-clamp-2 text-pretty pt-1 text-2xl font-bold leading-tight hover:text-main hover:underline md:text-4xl md:leading-tight"
+		class="line-clamp-2 text-pretty pt-1 text-xl font-bold hover:text-main hover:underline md:text-3xl"
 		href={`/${post.slug}`}
 	>
 		{post.title}
@@ -30,5 +35,5 @@
 	<p class="line-clamp-3 text-pretty pt-3 text-onSurfaceVariant">
 		{post.description}
 	</p>
-	<AuthorLG {post} />
+	<AuthorMD {post} />
 </article>
