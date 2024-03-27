@@ -6,9 +6,9 @@ export type PostPreviewsResponse = {
 			description: string;
 			publishedAt: string;
 			slug: string;
-			authors: AuthorPreviewResponse;
-			cover: Img;
-			category: CategoryPreviewResponse;
+			authors: AuthorsPreviewResponse;
+			cover: ImgResponse;
+			category: CategoryPreviewResponse1;
 		};
 	}[];
 	meta: {
@@ -16,18 +16,18 @@ export type PostPreviewsResponse = {
 	};
 };
 
-export type AuthorPreviewResponse = {
+export type AuthorsPreviewResponse = {
 	data: {
 		id: number;
 		attributes: {
 			name: string;
 			slug: string;
-			avatar: Img;
+			avatar: ImgResponse;
 		};
 	}[];
 };
 
-export type Img = {
+export type ImgResponse = {
 	data: {
 		id: number;
 		attributes: {
@@ -36,7 +36,7 @@ export type Img = {
 	};
 };
 
-export type CategoryPreviewResponse = {
+export type CategoryPreviewResponse1 = {
 	data: {
 		id: number;
 		attributes: {
@@ -51,6 +51,52 @@ export type CategoryPreviewResponse = {
 				};
 			};
 		};
+	};
+};
+
+export type CategoryPreviewResponse2 = {
+	data: {
+		id: number;
+		attributes: {
+			category: string;
+			slug: string;
+			parent: {
+				data: {
+					id: number;
+					attributes: {
+						slug: string;
+					};
+				};
+			};
+		};
+	};
+};
+
+export type CategoriesPreviewResponse = {
+	data: {
+		id: number;
+		attributes: {
+			title: string;
+			description: string;
+			publishedAt: string;
+			slug: string;
+			authors: AuthorsPreviewResponse;
+			cover: ImgResponse;
+			category: CategoryPreviewResponse2;
+		};
+	}[];
+	meta: {
+		pagination: PaginationStart;
+	};
+};
+
+export type TagsResponse = {
+	data: {
+		id: number;
+		attributes: TagPreview;
+	}[];
+	meta: {
+		pagination: PaginationPage;
 	};
 };
 
@@ -73,16 +119,6 @@ export type AuthorPreview = {
 export type CategoryPreview = {
 	category: string;
 	slug: string;
-};
-
-export type TagsResponse = {
-	data: {
-		id: number;
-		attributes: TagPreview;
-	}[];
-	meta: {
-		pagination: PaginationPage;
-	};
 };
 
 export type TagPreview = {
