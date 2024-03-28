@@ -1,4 +1,10 @@
-export type PostPreviewsResponse = {
+export type Home = {
+	posts: PostPreview[];
+	tags: TagPreview[];
+};
+
+//
+export type PostsResponse1 = {
 	data: {
 		id: number;
 		attributes: {
@@ -6,7 +12,7 @@ export type PostPreviewsResponse = {
 			description: string;
 			publishedAt: string;
 			slug: string;
-			authors: AuthorsPreviewResponse;
+			authors: AuthorsResponse;
 			cover: ImgResponse;
 			category: CategoryPreviewResponse1;
 		};
@@ -16,7 +22,7 @@ export type PostPreviewsResponse = {
 	};
 };
 
-export type AuthorsPreviewResponse = {
+export type AuthorsResponse = {
 	data: {
 		id: number;
 		attributes: {
@@ -54,6 +60,24 @@ export type CategoryPreviewResponse1 = {
 	};
 };
 
+export type PostsResponse2 = {
+	data: {
+		id: number;
+		attributes: {
+			title: string;
+			description: string;
+			publishedAt: string;
+			slug: string;
+			authors: AuthorsResponse;
+			cover: ImgResponse;
+			category: CategoryPreviewResponse2;
+		};
+	}[];
+	meta: {
+		pagination: PaginationStart;
+	};
+};
+
 export type CategoryPreviewResponse2 = {
 	data: {
 		id: number;
@@ -72,24 +96,6 @@ export type CategoryPreviewResponse2 = {
 	};
 };
 
-export type CategoriesPreviewResponse = {
-	data: {
-		id: number;
-		attributes: {
-			title: string;
-			description: string;
-			publishedAt: string;
-			slug: string;
-			authors: AuthorsPreviewResponse;
-			cover: ImgResponse;
-			category: CategoryPreviewResponse2;
-		};
-	}[];
-	meta: {
-		pagination: PaginationStart;
-	};
-};
-
 export type TagsResponse = {
 	data: {
 		id: number;
@@ -100,6 +106,7 @@ export type TagsResponse = {
 	};
 };
 
+//
 export type PostPreview = {
 	title: string;
 	description: string;
@@ -107,7 +114,7 @@ export type PostPreview = {
 	slug: string;
 	authors: AuthorPreview[];
 	cover: string;
-	category: CategoryPreview;
+	category: PostCategoryPreview;
 };
 
 export type AuthorPreview = {
@@ -116,16 +123,22 @@ export type AuthorPreview = {
 	avatar: string;
 };
 
-export type CategoryPreview = {
+export type PostCategoryPreview = {
 	category: string;
 	slug: string;
 };
+
+export type CategoryPreview = {
+	category: string;
+	posts: PostPreview[];
+}[];
 
 export type TagPreview = {
 	tag: string;
 	slug: string;
 };
 
+//
 export type PaginationStart = {
 	start: number;
 	limit: number;
@@ -137,9 +150,4 @@ export type PaginationPage = {
 	pageSize: number;
 	pageCount: number;
 	total: number;
-};
-
-export type Home = {
-	posts: PostPreview[];
-	tags: TagPreview[];
 };

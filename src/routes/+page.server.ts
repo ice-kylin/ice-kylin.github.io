@@ -1,8 +1,8 @@
 import type { LayoutServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import {
-	postPreviewsResponseToPostPreviews,
-	tagsResponseToTags
+	postsResponse1ToPostPreviews,
+	tagsResponseToTagPreviews
 } from '$lib/data';
 import type { Home } from '$lib/types';
 import { API_URL_SERVER } from '$lib/utils';
@@ -23,7 +23,7 @@ export const load: LayoutServerLoad = async ({ fetch }): Promise<Home> => {
 	}
 
 	return {
-		posts: postPreviewsResponseToPostPreviews(await postsRes.json()),
-		tags: tagsResponseToTags(await tagsRes.json())
+		posts: postsResponse1ToPostPreviews(await postsRes.json()),
+		tags: tagsResponseToTagPreviews(await tagsRes.json())
 	};
 };
