@@ -1,6 +1,7 @@
 export type Home = {
 	posts: PostPreview[];
 	tags: TagPreview[];
+	categories: CategoryPreview;
 };
 
 //
@@ -50,13 +51,20 @@ export type CategoryPreviewResponse1 = {
 			parent: {
 				data: {
 					id: number;
-					attributes: {
-						category: string;
-						slug: string;
-					};
+					attributes: PostCategoryPreview;
 				};
 			};
 		};
+	};
+};
+
+export type CategoriesResponse = {
+	data: {
+		id: number;
+		attributes: PostCategoryPreview;
+	}[];
+	meta: {
+		pagination: PaginationStart;
 	};
 };
 
