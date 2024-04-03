@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { Icon } from 'svelte-icon';
 	import cardsDiamondOutline from '@mdi/svg/svg/cards-diamond-outline.svg?raw';
 	import dotsGrid from '@mdi/svg/svg/dots-grid.svg?raw';
@@ -12,7 +12,7 @@
 	$: varStyles = `--bg:${bgColor}; --color:${color}; --slashColor:${slashColor}`;
 </script>
 
-<div class="header-wrapper" style={varStyles}>
+<div class="header-wrapper border-b border-b-outlineVariant" style={varStyles}>
 	<header
 		class="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-4 text-2xl"
 	>

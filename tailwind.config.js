@@ -143,7 +143,11 @@ export default {
 				sans,
 				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
 				art: ['KpSans', ...defaultTheme.fontFamily.sans],
-				num: ['Magra', ...defaultTheme.fontFamily.sans]
+				num: ['Magra', ...defaultTheme.fontFamily.sans],
+				mono: [
+					'Source Code Pro Variable',
+					...defaultTheme.fontFamily.mono
+				]
 			},
 			typography: {
 				m3: {
