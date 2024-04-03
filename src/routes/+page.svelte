@@ -21,7 +21,7 @@
 <!--suppress JSUnresolvedReference -->
 <RecentPosts posts={data.posts} />
 <!--suppress JSUnresolvedReference -->
-<Tags tags={data.tags} />
 <Category category={data.categories[0]} intent="right" />
+<Tags tags={data.tags} />
 <Category category={data.categories[1]} intent="left" />
 <Category category={data.categories[2]} intent="right" />

@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+	html,
+	body {
+		@apply min-h-screen;
+	}
+
 	/* theme */
 	:root,
 	html[data-theme='light'] {
@@ -116,7 +121,11 @@
 
 	/* gradient */
 	.night {
-		@apply bg-gradient-to-r from-[#AC32E4] from-0% via-[#7918F2] via-[48%] to-[#4801FF];
+		@apply bg-gradient-to-b from-[#AC32E4] from-0% via-[#7918F2] via-[48%] to-[#4801FF];
+	}
+
+	.premium {
+		@apply bg-[#1b1f23] bg-gradient-to-b from-white/15 to-white/0;
 	}
 
 	/* cursor */

@@ -15,10 +15,12 @@
 	)}
 >
 	<a href={`/${post.slug}`}>
-		<div
-			class="aspect-video rounded bg-cover"
-			style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
-		/>
+		<div class="aspect-video overflow-hidden rounded-md">
+			<div
+				class="h-full w-full bg-cover bg-center transition duration-300 hover:scale-105"
+				style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
+			/>
+		</div>
 	</a>
 	<h2 class="pt-6">
 		<a

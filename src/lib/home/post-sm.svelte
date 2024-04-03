@@ -18,10 +18,12 @@
 		class="col-span-12 shrink-0 md:w-1/3 md:max-w-40 lg:col-span-4 lg:w-auto"
 		href={`/${post.slug}`}
 	>
-		<div
-			class="aspect-video rounded bg-cover md:aspect-square"
-			style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
-		/>
+		<div class="aspect-video overflow-hidden rounded-md md:aspect-square">
+			<div
+				class="h-full w-full bg-cover bg-center transition duration-300 hover:scale-105"
+				style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
+			/>
+		</div>
 	</a>
 	<div class="col-span-12 pt-6 md:pt-0 lg:col-span-8">
 		<a
