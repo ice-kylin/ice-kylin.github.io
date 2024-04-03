@@ -19,7 +19,7 @@
 		href={`/${post.slug}`}
 	>
 		<div
-			class="aspect-video bg-cover md:aspect-square"
+			class="aspect-video rounded bg-cover md:aspect-square"
 			style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
 		/>
 	</a>

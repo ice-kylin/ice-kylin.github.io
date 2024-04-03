@@ -34,7 +34,7 @@ export const load: PageServerLoad = async ({ fetch }): Promise<Home> => {
 			((await categoriesRes.json()) as CategoriesResponse).data.map(
 				async (item) => {
 					const categoryRes = await fetch(
-						`${API_URL_SERVER}/posts?filters[category][parent][slug][$eq]=${item.attributes.slug}&sort[0]=publishedAt:desc&pagination[start]=0&pagination[limit]=6&fields[0]=title&fields[1]=description&fields[2]=publishedAt&fields[3]=slug&populate[authors][fields][0]=name&populate[authors][fields][1]=slug&populate[authors][populate][avatar][fields][0]=url&populate[cover][fields][0]=url&populate[category][fields][0]=slug&populate[category][fields][1]=category&populate[category][populate][parent][fields][0]=slug`
+						`${API_URL_SERVER}/posts?filters[category][parent][slug][$eq]=${item.attributes.slug}&sort[0]=publishedAt:desc&pagination[start]=0&pagination[limit]=4&fields[0]=title&fields[1]=description&fields[2]=publishedAt&fields[3]=slug&populate[authors][fields][0]=name&populate[authors][fields][1]=slug&populate[authors][populate][avatar][fields][0]=url&populate[cover][fields][0]=url&populate[category][fields][0]=slug&populate[category][fields][1]=category&populate[category][populate][parent][fields][0]=slug`
 					);
 
 					if (!categoryRes.ok) {

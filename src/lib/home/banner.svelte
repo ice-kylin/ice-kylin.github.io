@@ -1,4 +1,4 @@
-<div class="mx-auto max-w-screen-xl overflow-hidden p-6">
+<div class="mx-auto max-w-screen-xl overflow-hidden p-6 pt-[88px]">
 	<h1
 		class="night inline-block bg-clip-text font-mono text-9xl font-bold text-transparent"
 	>

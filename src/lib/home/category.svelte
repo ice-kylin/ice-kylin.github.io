@@ -3,6 +3,7 @@
 	import Posts from '$lib/home/posts.svelte';
 
 	export let category: CategoryPreview;
+	export let intent: 'main' | 'left' | 'right' = 'main';
 </script>
 
 <div class="mx-auto max-w-screen-xl px-6 pb-6 pt-14 lg:pt-20">
@@ -12,4 +13,4 @@
 		{category.category}
 	</div>
 </div>
-<Posts posts={category.posts} />
+<Posts {intent} posts={category.posts} />
