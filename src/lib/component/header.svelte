@@ -17,8 +17,8 @@
 
 	const links = [
 		{ name: '主页', href: '/' },
-		{ name: '标签', href: '/tag' },
 		{ name: '分类', href: '/category' },
+		{ name: '标签', href: '/tag' },
 		{ name: '时间轴', href: '/timeline' },
 		{ name: '画廊', href: '/gallery' },
 		{ name: '友情链接', href: '/links' },

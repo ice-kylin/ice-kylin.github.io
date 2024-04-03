@@ -4,6 +4,8 @@ export type Home = {
 	categories: CategoryPreview;
 };
 
+export type Tag = { tags: TagPreview[] };
+
 //
 export type PostsResponse1 = {
 	data: {

@@ -5,10 +5,10 @@
 	import RecentPosts from '$lib/home/recent-posts.svelte';
 	import Tags from '$lib/home/tags.svelte';
 	import Category from '$lib/home/category.svelte';
-	import type { LayoutData } from './$types';
+	import type { PageData } from './$types';
 	import { TITLE } from '$lib/config';
 
-	export let data: LayoutData;
+	export let data: PageData;
 </script>
 
 <svelte:head>
