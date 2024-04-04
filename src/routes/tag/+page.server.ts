@@ -13,7 +13,9 @@ export const load: PageServerLoad = async ({ fetch }): Promise<Tag> => {
 		error(tagsRes.status, 'Failed to fetch tags');
 	}
 
+	const tags = await tagsRes.json();
 	return {
-		tags: tagsResponseToTagPreviews(await tagsRes.json())
+		tags: tagsResponseToTagPreviews(tags),
+		pagination: tags.meta.pagination
 	};
 };
