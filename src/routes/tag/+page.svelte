@@ -12,8 +12,10 @@
 		class="border-b border-b-outlineVariant pb-10 pt-[88px] md:pb-12 md:pt-28"
 	>
 		<p>所有标签</p>
-		<h1 class="text-3xl font-bold md:text-5xl">Tags
-			<sub class="text-base">{data.pagination.total}</sub></h1>
+		<h1 class="text-3xl font-bold md:text-5xl">
+			Tags
+			<sub class="text-base">{data.pagination.total}</sub>
+		</h1>
 	</div>
 </div>
 <ul
