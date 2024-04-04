@@ -5,6 +5,6 @@ import compression from '@polka/compression';
 polka()
 	.use(compression())
 	.use(handler)
-	.listen(3000, () => {
-		console.log('Server running on http://localhost:3000 🚀');
+	.listen(3001, () => {
+		console.log('Server running on http://localhost:3001 🚀');
 	});
