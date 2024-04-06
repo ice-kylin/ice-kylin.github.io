@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Icon } from 'svelte-icon';
-	import logo from '@mdi/svg/svg/weather-windy.svg?raw';
+	import logo from '@mdi/svg/svg/cards-diamond-outline.svg?raw';
 </script>
 
 <a href="/">

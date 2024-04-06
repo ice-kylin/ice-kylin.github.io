@@ -15,7 +15,7 @@
 	)}
 >
 	<a href={`/${post.slug}`}>
-		<div class="aspect-video overflow-hidden rounded-md">
+		<div class="aspect-video overflow-hidden">
 			<div
 				class="h-full w-full bg-cover bg-center transition duration-300 hover:scale-105"
 				style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}
@@ -34,7 +34,9 @@
 	>
 		{post.title}
 	</a>
-	<p class="line-clamp-3 text-pretty pt-3 text-onSurfaceVariant">
+	<p
+		class="line-clamp-3 text-pretty pt-3 text-sm text-onSurfaceVariant md:text-base"
+	>
 		{post.description}
 	</p>
 	<AuthorMD {post} />

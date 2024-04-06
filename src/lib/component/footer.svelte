@@ -32,7 +32,7 @@
 					>CC BY-SA 4.0</A
 				>. Design by icekylin, inspired by
 				<A href="https://blog.github.com">Github Blog</A> and created with
-				love (≧∇≦) by icekylin.
+				love by icekylin.
 			</p>
 		</div>
 	</div>

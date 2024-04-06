@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@fontsource-variable/source-code-pro':
-    specifier: ^5.0.18
-    version: 5.0.18
   '@polka/compression':
     specifier: 1.0.0-next.25
     version: 1.0.0-next.25
@@ -16,6 +13,9 @@ dependencies:
     version: 0.5.2
 
 devDependencies:
+  '@fontsource-variable/fira-code':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@fontsource-variable/open-sans':
     specifier: ^5.0.28
     version: 5.0.28
@@ -625,13 +625,13 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
+  /@fontsource-variable/fira-code@5.0.17:
+    resolution: {integrity: sha512-TAzV74e3Tt6a7/cjxh1Jdly+Yrlc7AlSIMlzmtMUeDNQ0OcrYrcejkVRSRfGMjM+AuUhLw/PLoGV8fXj6pev5w==}
+    dev: true
+
   /@fontsource-variable/open-sans@5.0.28:
     resolution: {integrity: sha512-PYfH6e+Jm8N5DRRAEOGneQx3ObnyNgAJ9WTbw7w84tSEmvk+ypo1kUslF2WGkgaygU2uN7wwAAPVnO7YYpipzg==}
     dev: true
-
-  /@fontsource-variable/source-code-pro@5.0.18:
-    resolution: {integrity: sha512-Dg+nFJZWvL6XVJuRqpGsaYnlPnj6ti3ApXH6htGOm80F4TUj036iaU7noRp2dh9BLHkLhnX4S+GA+6kSgbtLng==}
-    dev: false
 
   /@humanwhocodes/config-array@0.11.14:
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}

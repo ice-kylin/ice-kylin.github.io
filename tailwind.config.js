@@ -2,12 +2,15 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 let sans = [
 	'Open Sans Variable',
-	'HarmonyOS Sans SC',
-	'PingFang SC',
-	'Inter Variable',
-	'Microsoft YaHei',
 	'-apple-system',
 	'BlinkMacSystemFont',
+	'Helvetica Neue',
+	'PingFang SC',
+	'Microsoft YaHei',
+	'Source Han Sans SC',
+	'Noto Sans CJK SC',
+	'WenQuanYi Micro Hei',
+	'HarmonyOS Sans SC',
 	'ui-sans-serif',
 	'system-ui',
 	'sans-serif',
@@ -141,13 +144,8 @@ export default {
 			},
 			fontFamily: {
 				sans,
-				serif: ['KpRoman', ...defaultTheme.fontFamily.serif],
-				art: ['KpSans', ...defaultTheme.fontFamily.sans],
-				num: ['Magra', ...defaultTheme.fontFamily.sans],
-				mono: [
-					'Source Code Pro Variable',
-					...defaultTheme.fontFamily.mono
-				]
+				serif: ['KpRoman', ...defaultTheme.fontFamily.serif]
+				// mono: ['Fira Code Variable', ...defaultTheme.fontFamily.mono]
 			},
 			typography: {
 				m3: {

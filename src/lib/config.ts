@@ -1,4 +1,7 @@
 export const TITLE: string = "ICEKYLIN'S BLOG";
+export const GITHUB: string =
+	'https://github.com/ice-kylin/ice-kylin.github.io';
+
 // export const description: string = '代码改变世界';
 export const LINKS = [
 	{

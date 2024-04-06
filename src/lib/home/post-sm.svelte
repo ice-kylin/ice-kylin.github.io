@@ -10,7 +10,7 @@
 
 <article
 	class={clsx(
-		'grid grid-cols-12 gap-0 border-b border-b-outlineVariant py-6 md:flex md:gap-7 lg:grid lg:grid-cols-12',
+		'grid grid-cols-12 gap-0 border-b border-b-surfaceContainerHigh py-6 md:flex md:gap-7 lg:grid lg:grid-cols-12',
 		last && 'lg:border-b-0'
 	)}
 >
@@ -18,7 +18,7 @@
 		class="col-span-12 shrink-0 md:w-1/3 md:max-w-40 lg:col-span-4 lg:w-auto"
 		href={`/${post.slug}`}
 	>
-		<div class="aspect-video overflow-hidden rounded-md md:aspect-square">
+		<div class="aspect-video overflow-hidden md:aspect-square">
 			<div
 				class="h-full w-full bg-cover bg-center transition duration-300 hover:scale-105"
 				style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}

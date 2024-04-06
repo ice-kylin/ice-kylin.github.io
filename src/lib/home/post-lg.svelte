@@ -7,10 +7,10 @@
 </script>
 
 <article
-	class="col-span-12 border-b border-b-outlineVariant py-6 lg:col-span-7 lg:border-b-0"
+	class="col-span-12 border-b border-b-surfaceContainerHigh py-6 lg:col-span-7 lg:border-b-0"
 >
 	<a href={`/${post.slug}`}>
-		<div class="aspect-video overflow-hidden rounded-md">
+		<div class="aspect-video overflow-hidden">
 			<div
 				class="h-full w-full bg-cover bg-center transition duration-300 hover:scale-105"
 				style={`background-image: url("${API_URL_CLIENT}${post.cover}");`}

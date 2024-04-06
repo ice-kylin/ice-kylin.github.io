@@ -4,9 +4,9 @@ import { tagsResponseToTagPreviews } from '$lib/data';
 import type { Tag } from '$lib/types';
 import { API_URL_SERVER } from '$lib/utils';
 
-export const load: PageServerLoad = async ({ fetch }): Promise<Tag> => {
+export const load: PageServerLoad = async ({ fetch, params }): Promise<Tag> => {
 	const tagsRes = await fetch(
-		`${API_URL_SERVER}/tags?[fields][0]=tag&[fields][1]=slug`
+		`${API_URL_SERVER}/tags?pagination[page]=${params.page}&pagination[pageSize]=100&[fields][0]=tag&[fields][1]=slug`
 	);
 
 	if (!tagsRes.ok) {
