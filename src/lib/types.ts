@@ -7,6 +7,7 @@ export type Home = {
 export type Tags = { tags: TagPreview[]; pagination: PaginationPage };
 
 export type Tag = {
+	tag: string;
 	posts: PostPreview2[];
 	pagination: PaginationPage;
 };

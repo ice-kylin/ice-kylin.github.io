@@ -11,7 +11,6 @@ export const load: PageServerLoad = async ({
 	const tagsRes = await fetch(
 		`${API_URL_SERVER}/tags?pagination[page]=${params.page}&pagination[pageSize]=100&[fields][0]=tag&[fields][1]=slug`
 	);
-
 	if (!tagsRes.ok) {
 		error(tagsRes.status, 'Failed to fetch tags');
 	}

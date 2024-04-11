@@ -12,19 +12,20 @@ export const load: PageServerLoad = async ({ fetch }): Promise<Home> => {
 	const postsRes = await fetch(
 		`${API_URL_SERVER}/posts?sort[0]=publishedAt:desc&pagination[start]=0&pagination[limit]=6&fields[0]=title&fields[1]=description&fields[2]=publishedAt&fields[3]=slug&populate[authors][fields][0]=name&populate[authors][fields][1]=slug&populate[authors][populate][avatar][fields][0]=url&populate[cover][fields][0]=url&populate[category][fields][0]=slug&populate[category][populate][parent][fields][0]=category&populate[category][populate][parent][fields][1]=slug`
 	);
-	const categoriesRes = await fetch(
-		`${API_URL_SERVER}/categories?filters[parent]&[fields][0]=category&[fields][1]=slug`
-	);
-	const tagsRes = await fetch(
-		`${API_URL_SERVER}/tags?[fields][0]=tag&[fields][1]=slug`
-	);
-
 	if (!postsRes.ok) {
 		error(postsRes.status, 'Failed to fetch posts');
 	}
+
+	const categoriesRes = await fetch(
+		`${API_URL_SERVER}/categories?filters[parent]&[fields][0]=category&[fields][1]=slug`
+	);
 	if (!categoriesRes.ok) {
 		error(categoriesRes.status, 'Failed to fetch categories');
 	}
+
+	const tagsRes = await fetch(
+		`${API_URL_SERVER}/tags?[fields][0]=tag&[fields][1]=slug`
+	);
 	if (!tagsRes.ok) {
 		error(tagsRes.status, 'Failed to fetch tags');
 	}

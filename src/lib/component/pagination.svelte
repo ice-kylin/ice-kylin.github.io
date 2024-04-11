@@ -32,7 +32,7 @@
 	$: next = pagination.page < pagination.pageCount;
 </script>
 
-{#if pagination.pageCount !== 1}
+{#if pagination.pageCount > 1}
 	<div class="mx-auto max-w-screen-xl px-6">
 		<div
 			class="flex flex-wrap items-center justify-center gap-2 border-t border-t-outlineVariant pt-6 font-mono text-sm"
