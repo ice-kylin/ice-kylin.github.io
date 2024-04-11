@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { PostPreview } from '$lib/types';
+	import type { PostPreview1 } from '$lib/types';
 	import { API_URL_CLIENT } from '$lib/utils';
 	import { clsx } from 'clsx';
 	import AuthorSM from '$lib/home/author-sm.svelte';
 
-	export let post: PostPreview;
+	export let post: PostPreview1;
 	export let last = false;
 </script>
 

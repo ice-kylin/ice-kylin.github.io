@@ -2,11 +2,11 @@
 	import PostSM from '$lib/home/post-sm.svelte';
 	import PostMD from '$lib/home/post-md.svelte';
 	import PostLG from '$lib/home/post-lg.svelte';
-	import type { PostPreview } from '$lib/types';
+	import type { PostPreview1 } from '$lib/types';
 	import { clsx } from 'clsx';
 
 	export let intent: 'main' | 'left' | 'right' = 'main';
-	export let posts: PostPreview[];
+	export let posts: PostPreview1[];
 
 	$: ps1 = posts.slice(1, 4);
 	$: ps2 = posts.slice(4, 6);

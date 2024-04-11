@@ -1,10 +1,15 @@
 export type Home = {
-	posts: PostPreview[];
+	posts: PostPreview1[];
 	tags: TagPreview[];
 	categories: CategoryPreview;
 };
 
-export type Tag = { tags: TagPreview[]; pagination: PaginationPage };
+export type Tags = { tags: TagPreview[]; pagination: PaginationPage };
+
+export type Tag = {
+	posts: PostPreview2[];
+	pagination: PaginationPage;
+};
 
 //
 export type PostsResponse1 = {
@@ -117,20 +122,35 @@ export type TagsResponse = {
 };
 
 //
-export type PostPreview = {
+export type PostPreview1 = {
 	title: string;
 	description: string;
 	publishedAt: string;
 	slug: string;
-	authors: AuthorPreview[];
+	authors: AuthorPreview1[];
 	cover: string;
 	category: PostCategoryPreview;
 };
 
-export type AuthorPreview = {
+export type PostPreview2 = {
+	title: string;
+	description: string;
+	publishedAt: string;
+	slug: string;
+	authors: AuthorPreview2[];
+	cover: string;
+	category: PostCategoryPreview;
+};
+
+export type AuthorPreview1 = {
 	name: string;
 	slug: string;
 	avatar: string;
+};
+
+export type AuthorPreview2 = {
+	name: string;
+	slug: string;
 };
 
 export type PostCategoryPreview = {
@@ -140,7 +160,7 @@ export type PostCategoryPreview = {
 
 export type CategoryPreview = {
 	category: string;
-	posts: PostPreview[];
+	posts: PostPreview1[];
 }[];
 
 export type TagPreview = {

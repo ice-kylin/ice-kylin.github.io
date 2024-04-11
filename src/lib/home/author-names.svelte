@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { AuthorPreview } from '$lib/types';
+	import type { AuthorPreview1 } from '$lib/types';
 
-	export let authors: AuthorPreview[];
+	export let authors: AuthorPreview1[];
 </script>
 
 {#each authors as author, i}

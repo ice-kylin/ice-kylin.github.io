@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { PostPreview } from '$lib/types.js';
+	import type { PostPreview1 } from '$lib/types.js';
 	import AuthorNames from '$lib/home/author-names.svelte';
 
-	export let post: PostPreview;
+	export let post: PostPreview1;
 </script>
 
 <div class="flex flex-wrap items-center justify-between gap-2 pt-6">

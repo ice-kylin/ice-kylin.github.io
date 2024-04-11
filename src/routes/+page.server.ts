@@ -1,8 +1,8 @@
 import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import {
-	postsResponse1ToPostPreviews,
-	postsResponse2ToPostPreviews,
+	postsResponse1ToPostPreview1s,
+	postsResponse2ToPostPreview1s,
 	tagsResponseToTagPreviews
 } from '$lib/data';
 import type { CategoriesResponse, Home } from '$lib/types';
@@ -43,7 +43,7 @@ export const load: PageServerLoad = async ({ fetch }): Promise<Home> => {
 
 					return {
 						category: item.attributes.category,
-						posts: postsResponse2ToPostPreviews(
+						posts: postsResponse2ToPostPreview1s(
 							await categoryRes.json()
 						)
 					};
@@ -52,7 +52,7 @@ export const load: PageServerLoad = async ({ fetch }): Promise<Home> => {
 		);
 
 		return {
-			posts: postsResponse1ToPostPreviews(await postsRes.json()),
+			posts: postsResponse1ToPostPreview1s(await postsRes.json()),
 			tags: tagsResponseToTagPreviews(await tagsRes.json()),
 			categories
 		};

@@ -68,7 +68,7 @@
 	</header>
 	<div
 		class={clsx('mx-6 h-px bg-surfaceContainerHigh', $isClose && 'hidden')}
-	></div>
+	/>
 	<nav
 		class={clsx(
 			'flex overflow-auto text-sm md:hidden',

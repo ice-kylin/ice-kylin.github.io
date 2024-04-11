@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { PostPreview } from '$lib/types';
+	import type { PostPreview1 } from '$lib/types';
 	import AuthorNames from './author-names.svelte';
 
-	export let post: PostPreview;
+	export let post: PostPreview1;
 </script>
 
 <div

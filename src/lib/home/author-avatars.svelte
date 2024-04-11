@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { API_URL_CLIENT } from '$lib/utils';
-	import type { AuthorPreview } from '$lib/types';
+	import type { AuthorPreview1 } from '$lib/types';
 
-	export let authors: AuthorPreview[];
+	export let authors: AuthorPreview1[];
 </script>
 
 <ul class="flex">

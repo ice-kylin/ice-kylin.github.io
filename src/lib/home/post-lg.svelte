@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { API_URL_CLIENT } from '$lib/utils.js';
-	import type { PostPreview } from '$lib/types';
+	import type { PostPreview1 } from '$lib/types';
 	import AuthorLG from '$lib/home/author-lg.svelte';
 
-	export let post: PostPreview;
+	export let post: PostPreview1;
 </script>
 
 <article
