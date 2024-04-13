@@ -5,7 +5,7 @@
 	export let post: PostPreview1 | PostPreview2;
 </script>
 
-<div class="flex flex-wrap items-center justify-between gap-2 pt-6">
+<div class="flex flex-wrap items-center justify-between gap-2 pt-3.5">
 	<p class="text-sm font-bold">
 		<AuthorNames authors={post.authors} />
 	</p>

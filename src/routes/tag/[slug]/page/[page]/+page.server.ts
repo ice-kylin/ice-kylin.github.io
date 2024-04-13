@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
-import { postsResponse2ToPostPreview2s } from '$lib/data';
+import { postsResponse1ToPostPreview2s } from '$lib/data';
 import type { Tag } from '$lib/types';
 import { API_URL_SERVER } from '$lib/utils';
 
@@ -22,7 +22,7 @@ export const load: PageServerLoad = async ({ fetch, params }): Promise<Tag> => {
 	const posts = await postsRes.json();
 	return {
 		tag: (await tagRes.json()).data[0].attributes.tag,
-		posts: postsResponse2ToPostPreview2s(posts),
+		posts: postsResponse1ToPostPreview2s(posts),
 		pagination: posts.meta.pagination
 	};
 };

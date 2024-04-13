@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { API_URL_CLIENT } from '$lib/utils.js';
-	import type { PostPreview1 } from '$lib/types';
-	import AuthorMD from '$lib/home/author-md.svelte';
+	import type { PostPreview2 } from '$lib/types';
 	import { clsx } from 'clsx';
+	import { API_URL_CLIENT } from '$lib/utils.js';
+	import AuthorSM from './author-sm.svelte';
 
-	export let post: PostPreview1;
+	export let post: PostPreview2;
 	export let last = false;
 </script>
 
 <article
 	class={clsx(
-		'col-span-12 border-surfaceContainerHigh py-6 lg:col-span-6 lg:border-b-0 lg:border-t',
+		'col-span-12 border-surfaceContainerHigh py-6 md:col-span-4 md:border-b-0 md:border-t',
 		!last && 'border-b'
 	)}
 >
@@ -22,22 +22,20 @@
 			/>
 		</div>
 	</a>
-	<h2 class="pt-6">
+	<h2 class="pt-4">
 		<a
 			class="night bg-clip-text text-sm font-bold text-transparent"
 			href={`/category/${post.category.slug}`}>{post.category.category}</a
 		>
 	</h2>
 	<a
-		class="line-clamp-2 text-pretty pt-1 text-xl font-bold hover:text-main hover:underline md:text-3xl"
+		class="line-clamp-2 text-pretty pt-1 text-xl font-bold hover:text-main hover:underline"
 		href={`/${post.slug}`}
 	>
 		{post.title}
 	</a>
-	<p
-		class="line-clamp-3 text-pretty pt-3 text-sm text-onSurfaceVariant md:text-base"
-	>
+	<p class="line-clamp-3 text-pretty pt-3 text-sm text-onSurfaceVariant">
 		{post.description}
 	</p>
-	<AuthorMD {post} />
+	<AuthorSM {post} />
 </article>

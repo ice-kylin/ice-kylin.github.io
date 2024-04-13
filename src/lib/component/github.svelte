@@ -1,7 +1,7 @@
 <script lang="ts">
+	import { GITHUB } from '$lib/config';
 	import { Icon } from 'svelte-icon';
 	import github from '@mdi/svg/svg/github.svg?raw';
-	import { GITHUB } from '$lib/config';
 </script>
 
 <a {...$$props} href={GITHUB}>

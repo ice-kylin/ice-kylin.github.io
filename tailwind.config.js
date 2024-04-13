@@ -2,6 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 
 let sans = [
 	'Open Sans Variable',
+	'HarmonyOS Sans SC',
 	'-apple-system',
 	'BlinkMacSystemFont',
 	'Helvetica Neue',
@@ -10,7 +11,6 @@ let sans = [
 	'Source Han Sans SC',
 	'Noto Sans CJK SC',
 	'WenQuanYi Micro Hei',
-	'HarmonyOS Sans SC',
 	'ui-sans-serif',
 	'system-ui',
 	'sans-serif',

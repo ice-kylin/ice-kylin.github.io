@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { DISPLAY } from '$lib/config';
 	import { clsx } from 'clsx';
-	import { Icon } from 'svelte-icon';
 	import { isClose } from '$lib/store/header';
 	import { page } from '$app/stores';
+	import { DISPLAY } from '$lib/config';
+	import { Icon } from 'svelte-icon';
 	import Logo from './logo.svelte';
 	import dotsGrid from '@mdi/svg/svg/dots-grid.svg?raw';
 	import closeIcon from '@mdi/svg/svg/close.svg?raw';
@@ -33,12 +33,10 @@
 	<header
 		class="mx-auto flex max-w-screen-xl items-center justify-between px-6 py-4 text-onBackground"
 	>
-		<div class="flex items-center gap-2">
+		<div class="flex items-center gap-2 text-2xl">
 			<Logo class="text-main" />
 			<span class="text-outline">/</span>
-			<a class="font-mono text-xl font-bold hover:underline" href="/"
-				>{DISPLAY}</a
-			>
+			<a class="font-bold hover:underline" href="/">{DISPLAY}</a>
 		</div>
 		<nav
 			class="mr-6 hidden grow border-r border-r-surfaceContainerHigh pr-6 md:block"

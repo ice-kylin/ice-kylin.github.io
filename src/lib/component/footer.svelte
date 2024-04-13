@@ -2,8 +2,8 @@
 	import * as config from '$lib/config';
 	import { Icon } from 'svelte-icon';
 	import arrowUp from '@mdi/svg/svg/arrow-up.svg?raw';
-	import A from '$lib/component/a.svelte';
 	import Logo from '$lib/component/logo.svelte';
+	import A from '$lib/component/a.svelte';
 
 	let h: number;
 </script>

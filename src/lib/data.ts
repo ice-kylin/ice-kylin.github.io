@@ -53,8 +53,8 @@ export function postsResponse2ToPostPreview1s(
 	});
 }
 
-export function postsResponse2ToPostPreview2s(
-	r: PostsResponse2
+export function postsResponse1ToPostPreview2s(
+	r: PostsResponse1
 ): PostPreview2[] {
 	return r.data.map((item) => {
 		const attributes = item.attributes;
@@ -66,7 +66,9 @@ export function postsResponse2ToPostPreview2s(
 			authors: getAuthors2(attributes.authors),
 			cover: attributes.cover.data.attributes.url,
 			category: {
-				category: attributes.category.data.attributes.category,
+				category:
+					attributes.category.data.attributes.parent.data.attributes
+						.category,
 				slug: `${attributes.category.data.attributes.parent.data.attributes.slug}/${attributes.category.data.attributes.slug}`
 			}
 		};
