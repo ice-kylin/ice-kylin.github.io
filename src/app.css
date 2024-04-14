@@ -124,6 +124,10 @@
 		@apply bg-gradient-to-b from-[#AC32E4] from-0% via-[#7918F2] via-[48%] to-[#4801FF];
 	}
 
+	.hope {
+		@apply bg-gradient-to-r from-[#C471F5] to-[#FA71CD];
+	}
+
 	.premium {
 		@apply bg-[#1b1f23] bg-gradient-to-b from-white/15 to-white/0;
 	}

@@ -4,6 +4,18 @@ export type Home = {
 	categories: CategoryPreview;
 };
 
+export type Post = {
+	title: string;
+	description: string;
+	publishedAt: string;
+	updatedAt: string;
+	authors: AuthorPreview1[];
+	tags: TagPreview[];
+	category: PostCategoryPreview;
+	content: string;
+	cover: string;
+};
+
 export type Tags = { tags: TagPreview[]; pagination: PaginationPage };
 
 export type Tag = {
@@ -110,6 +122,45 @@ export type CategoryPreviewResponse2 = {
 			};
 		};
 	};
+};
+
+export type CategoryPreviewResponse3 = {
+	data: {
+		id: number;
+		attributes: {
+			category: string;
+			slug: string;
+			parent: {
+				data: {
+					id: number;
+					attributes: PostCategoryPreview;
+				};
+			};
+		};
+	};
+};
+
+export type PostResponse = {
+	data: {
+		id: number;
+		attributes: {
+			title: string;
+			description: string;
+			publishedAt: string;
+			updatedAt: string;
+			authors: AuthorsResponse;
+			tags: {
+				data: {
+					id: number;
+					attributes: TagPreview;
+				}[];
+			};
+			category: CategoryPreviewResponse3;
+			content: string;
+			cover: ImgResponse;
+		};
+	}[];
+	meta: PaginationPage;
 };
 
 export type TagsResponse = {

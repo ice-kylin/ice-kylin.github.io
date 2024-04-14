@@ -18,9 +18,7 @@
 <!--<Slogan />-->
 <Header />
 <Banner />
-<!--suppress JSUnresolvedReference -->
 <RecentPosts posts={data.posts} />
-<!--suppress JSUnresolvedReference -->
 <Category category={data.categories[0]} intent="right" />
 <Tags tags={data.tags} />
 <Category category={data.categories[1]} intent="left" />
