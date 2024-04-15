@@ -1,6 +1,4 @@
 <script lang="ts">
-	import 'carta-md/default.css';
-	import '@cartamd/plugin-code/default.css';
 	import type { PageData } from './$types';
 	import { API_URL_CLIENT } from '$lib/utils';
 	import Header from '$lib/component/h.svelte';
